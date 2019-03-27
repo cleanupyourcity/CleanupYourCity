@@ -43,33 +43,35 @@ Group Project - README Template
 
 ### 2. Screen Archetypes
 
-* [Login Screen]
-* [User can Login, User can register]
-* ...
-* [Stream / Maps]
-* [User can view garbage in their area]
+* Login Screen
+* []User can Login, User can register
 
-* [Creation]
-* [User can add location and details to clean]
+* Stream / Maps
+* []User can view garbage in their area
 
-* [Detail]
-* [User can view garbage details]
+* Creation
+* []User can add location and details to clean
 
-* [Profile]
-* [User can view profile and history]
-* [*Nice-to-have* Leaderboards]
-* ...
+* Detail
+* []User can view garbage details
+
+* Profile
+* []User can view profile and history
+* []*Nice-to-have* Leaderboards
+
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [Profile Tab Button from Stream/Maps to Profile View]
-* [Add garbage Tab Button from Stream/Maps to Creation View]
-* [Back button from Profile View to Stream/Maps View]
-* [Back button from Creation View to Stream/Maps View]
-* [Back button from Detail View to Stream/Maps View]
-* Optional [Leaderboard Tab Button from Profile View to Leaderboard View]
+* []Profile Tab Button from Stream/Maps to Profile View
+* []Add garbage Tab Button from Stream/Maps to Creation View
+* []Back button from Profile View to Stream/Maps View
+* []Back button from Creation View to Stream/Maps View
+* []Back button from Detail View to Stream/Maps View]
+
+* Optional 
+*[]Leaderboard Tab Button from Profile View to Leaderboard View
 
 
 **Flow Navigation** (Screen to Screen)
