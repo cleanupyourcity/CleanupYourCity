@@ -83,7 +83,7 @@ Group Project - README Template
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
 
-[Imgur](https://i.imgur.com/FuSb40N.jpg)
+![Imgur](https://i.imgur.com/FuSb40N.jpg)
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
