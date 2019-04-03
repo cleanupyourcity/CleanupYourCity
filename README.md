@@ -81,6 +81,7 @@ Profile
 
 
 ## Wireframes
+
 ![Wireframes](https://i.imgur.com/FuSb40N.jpg)
 
 ### [BONUS] Digital Wireframes & Mockups
