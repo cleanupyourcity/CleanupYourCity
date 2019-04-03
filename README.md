@@ -105,6 +105,7 @@ Profile
    | severity    | Number   | the severity of the trash at the event rated from 1-4 |
    | date        | DateTime | date when event should be cleaned up      |
    | picture     | Image    | an image of the trash at the location  |
+   | comments    | String Array    | comments the users can post on the events  |
 #### User
    | Property    | Type     | Description |
    | ------------| -------- | ------------|
