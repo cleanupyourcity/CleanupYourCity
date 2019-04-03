@@ -94,8 +94,23 @@ Profile
 [This section will be completed in Unit 9]
 
 ### Models
-[Add table of models]
-
+#### Event
+   | Property    | Type     | Description |
+   | ------------| -------- | ------------|
+   | eventNumber | Number   | unique id for the event post (default field) |
+   | username    | Pointer to User | event author |
+   | trashType   | String/Image     | emoji of trash that is at the event |
+   | location    | Number   | the location the trash is at |
+   | description | Number   | description of the trash at the event |
+   | severity    | Number   | the severity of the trash at the event rated from 1-4 |
+   | date        | DateTime | date when event should be cleaned up      |
+   | picture     | Image    | an image of the trash at the location  |
+#### User
+   | Property    | Type     | Description |
+   | ------------| -------- | ------------|
+   | username    | String   | unique string for the user |
+   | picture     | Image    | profile image for the user |
+   | history     | Array of event pointers | history of events already completed by the user |
 
 ### Networking
 - [Add list of network requests by screen]
