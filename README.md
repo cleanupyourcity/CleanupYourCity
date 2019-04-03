@@ -84,7 +84,7 @@ Profile
 ![Wireframes](https://i.imgur.com/FuSb40N.jpg)
 
 ### [BONUS] Digital Wireframes & Mockups
-
+![Wireframes](https://www.figma.com/file/bDCeyq5xEySU8817IuJWtkqo/Edit?node-id=0%3A1)
 
 ### [BONUS] Interactive Prototype
 
