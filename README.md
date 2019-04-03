@@ -134,6 +134,8 @@ Profile
          - (Create/POST) Create map pin
 
       - (Delete) Delete existing event
+      - (Create/POST) Optional: Upvote/Downvote
+
       
    - Create Post Screen
       - (Create/POST) Input event details
@@ -146,12 +148,13 @@ Profile
 
    - Post Detail Screen
       - (Read/GET) Query all data from event
-      - (Create/POST) Create a new comment on a post
-      - (Delete) Delete existing comment
+         Optional: Comments
+         - (Create/POST) Create a new comment on a post
+         - (Delete) Delete existing comment
 
    - Profile Screen
       - (Read/GET) Query logged in user object
       - (Update/PUT) Update user profile image and info field
       
-   - Leaderboard
+   - Optional: Leaderboard
       - (Read/GET) Query all posts by ranking
