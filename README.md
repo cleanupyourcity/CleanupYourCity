@@ -11,7 +11,7 @@ Group Project - README Template
 
 ## Overview
 ### Description
-*This application allows users to be involved in keeping their city clean.* 
+This application allows users to be involved in keeping their city clean!
 - A user can choose a location where they see some garbage or (like on 
 the side of a road), give the location a danger rating from 1-4, and choose 
 an icon(s) that show the type(s) of garbage present.
@@ -52,46 +52,46 @@ still decide to withdraw their decision.
 
 ### 2. Screen Archetypes
 
-* Login Screen
-* []User can Login, User can register
+Login Screen
+* User can Login, User can register
 
-* Stream / Maps
-* []User can view garbage in their area
+Stream / Maps
+* User can view garbage in their area
 
-* Creation
-* []User can add location and details to clean
+Creation
+* User can add location and details to clean
 
-* Detail
-* []User can view garbage details
+Detail
+* User can view garbage details
 
-* Profile
-* []User can view profile and history
-* []*Nice-to-have* Leaderboard
+Profile
+* User can view profile and history
+* (*Nice-to-have* )Leaderboard
 
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* []Profile Tab Button from Stream/Maps to Profile View
-* []Add garbage Tab Button from Stream/Maps to Creation View
-* []Back button from Profile View to Stream/Maps View
-* []Back button from Creation View to Stream/Maps View
-* []Back button from Detail View to Stream/Maps View]
+* Profile Tab Button from Stream/Maps to Profile View
+* Add garbage Tab Button from Stream/Maps to Creation View
+* Back button from Profile View to Stream/Maps View
+* Back button from Creation View to Stream/Maps View
+* Back button from Detail View to Stream/Maps View
 
-* Optional 
-*[]Leaderboard Tab Button from Profile View to Leaderboard View
+**Optional Tab Navigation**
+*Leaderboard Tab Button from Profile View to Leaderboard View
 
 
 **Flow Navigation** (Screen to Screen)
 
-* [Stream/Maps View: Tap Trash to View Details View]
+* Stream/Maps View: Tap Trash to View Details View
 
 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-![Wireframe](https://i.imgur.com/FuSb40N.jpg)
+
+![Wireframes](https://i.imgur.com/FuSb40N.jpg)
 
 ### [BONUS] Digital Wireframes & Mockups
 
@@ -102,6 +102,6 @@ still decide to withdraw their decision.
 ### Models
 [Add table of models]
 ### Networking
-- [Add list of network requests by screen ]
+- [Add list of network requests by screen]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
