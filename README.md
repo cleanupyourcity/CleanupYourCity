@@ -11,7 +11,16 @@ Group Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+*This application allows users to be involved in keeping their city clean.* 
+- A user can choose a location where they see some garbage or (like on 
+the side of a road), give the location a danger rating from 1-4, and choose 
+an icon(s) that show the type(s) of garbage present.
+- A user can also see the locations that have already been marked as
+having garbage, and can choose to adopt that garbage for points. Before 
+choosing, they can also see the danger level and the potential contents of
+the garbage.
+- If for any reason the user can't adopt some particular garbage, they can 
+still decide to withdraw their decision.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
@@ -57,7 +66,7 @@ Group Project - README Template
 
 * Profile
 * []User can view profile and history
-* []*Nice-to-have* Leaderboards
+* []*Nice-to-have* Leaderboard
 
 
 ### 3. Navigation
@@ -82,7 +91,7 @@ Group Project - README Template
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://cdn1.imggmi.com/uploads/2019/4/3/b0691050281f4f96915836faa49b91c4-full.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
