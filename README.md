@@ -91,7 +91,7 @@ still decide to withdraw their decision.
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://cdn1.imggmi.com/uploads/2019/4/3/b0691050281f4f96915836faa49b91c4-prev.jpg"  width=600>
+<img src="https://imggmi.com/full/2019/4/3/b0691050281f4f96915836faa49b91c4-full.jpg.html" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
