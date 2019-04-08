@@ -85,7 +85,12 @@ Profile
 ![Wireframes](https://i.imgur.com/FuSb40N.jpg)
 
 ### [BONUS] Digital Wireframes & Mockups
-![Wireframes](Mockup/filename all.png)
+![Wireframes](Mockup/all.png)
+![Wireframes](Mockup/s1.png)
+![Wireframes](Mockup/s2.png)
+![Wireframes](Mockup/s3.png)
+![Wireframes](Mockup/s4.png)
+![Wireframes](Mockup/s5.png)
 
 ### [BONUS] Interactive Prototype
 
