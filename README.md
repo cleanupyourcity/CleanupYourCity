@@ -34,12 +34,12 @@ still decide to withdraw their decision.
 ### 1. User Stories (Required and Optional)
 **Required Stories**
 
-* User can register
-* User can login
+* User can register and login
 * User can view garbage in their area
 * User can add location to clean
+* User can view profile info
 * User can adopt garbage
-* User can view profile
+
 
 **Optional Stories**
 
@@ -85,7 +85,7 @@ Profile
 ![Wireframes](https://i.imgur.com/FuSb40N.jpg)
 
 ### [BONUS] Digital Wireframes & Mockups
-![Wireframes](https://www.figma.com/file/bDCeyq5xEySU8817IuJWtkqo/Edit?node-id=0%3A1)
+![Wireframes](Mockup/filename all.png)
 
 ### [BONUS] Interactive Prototype
 
