@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CleanUpYourCity' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for CleanUpYourCity
+  pod 'Firebase/Core'
+
+  target 'CleanUpYourCityTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CleanUpYourCityUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
