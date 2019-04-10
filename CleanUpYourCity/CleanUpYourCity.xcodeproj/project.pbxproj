@@ -14,6 +14,10 @@
 		85CEEB4B224C2A0000CAC35B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CEEB49224C2A0000CAC35B /* LaunchScreen.storyboard */; };
 		85CEEB56224C2A0000CAC35B /* CleanUpYourCityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEEB55224C2A0000CAC35B /* CleanUpYourCityTests.swift */; };
 		85CEEB61224C2A0000CAC35B /* CleanUpYourCityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEEB60224C2A0000CAC35B /* CleanUpYourCityUITests.swift */; };
+		A30CF146225E98D300678871 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30CF145225E98D300678871 /* Profile.storyboard */; };
+		A33EECE7225E9154009E810C /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECE6225E9154009E810C /* Event.storyboard */; };
+		A33EECEB225E91A4009E810C /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEA225E91A4009E810C /* Add.storyboard */; };
+		A33EECED225E91B4009E810C /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEC225E91B4009E810C /* EditProfile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		85CEEB5C224C2A0000CAC35B /* CleanUpYourCityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanUpYourCityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CEEB60224C2A0000CAC35B /* CleanUpYourCityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanUpYourCityUITests.swift; sourceTree = "<group>"; };
 		85CEEB62224C2A0000CAC35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A30CF145225E98D300678871 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		A33EECE6225E9154009E810C /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
+		A33EECEA225E91A4009E810C /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		A33EECEC225E91B4009E810C /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				85CEEB47224C2A0000CAC35B /* Assets.xcassets */,
 				85CEEB49224C2A0000CAC35B /* LaunchScreen.storyboard */,
 				85CEEB4C224C2A0000CAC35B /* Info.plist */,
+				A33EECE6225E9154009E810C /* Event.storyboard */,
+				A33EECEA225E91A4009E810C /* Add.storyboard */,
+				A33EECEC225E91B4009E810C /* EditProfile.storyboard */,
+				A30CF145225E98D300678871 /* Profile.storyboard */,
 			);
 			path = CleanUpYourCity;
 			sourceTree = "<group>";
@@ -233,7 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CEEB4B224C2A0000CAC35B /* LaunchScreen.storyboard in Resources */,
+				A33EECED225E91B4009E810C /* EditProfile.storyboard in Resources */,
+				A33EECE7225E9154009E810C /* Event.storyboard in Resources */,
 				85CEEB48224C2A0000CAC35B /* Assets.xcassets in Resources */,
+				A33EECEB225E91A4009E810C /* Add.storyboard in Resources */,
+				A30CF146225E98D300678871 /* Profile.storyboard in Resources */,
 				85CEEB46224C2A0000CAC35B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CleanUpYourCity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Group3.CleanUpYourCity;
@@ -441,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CleanUpYourCity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Group3.CleanUpYourCity;
