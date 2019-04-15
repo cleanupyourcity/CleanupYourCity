@@ -20,8 +20,11 @@
 		A33EECE7225E9154009E810C /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECE6225E9154009E810C /* Event.storyboard */; };
 		A33EECEB225E91A4009E810C /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEA225E91A4009E810C /* Add.storyboard */; };
 		A33EECED225E91B4009E810C /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEC225E91B4009E810C /* EditProfile.storyboard */; };
-		A97BD40C225EA9F30008141A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A97BD40B225EA9F30008141A /* GoogleService-Info.plist */; };
 		B0EF92A56B3BCC34913A9B66 /* Pods_CleanUpYourCityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA64C0477E298430D256E1C7 /* Pods_CleanUpYourCityUITests.framework */; };
+		BCF912AC2263F48500D2B83C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF912AB2263F48500D2B83C /* LoginViewController.swift */; };
+		BCF912AF226408D200D2B83C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF912AE226408D200D2B83C /* CustomButton.swift */; };
+		BCF912B12264090000D2B83C /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF912B02264090000D2B83C /* CustomTextfield.swift */; };
+		BCF912B3226529F400D2B83C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF912B2226529F400D2B83C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +68,11 @@
 		A33EECE6225E9154009E810C /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		A33EECEA225E91A4009E810C /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
 		A33EECEC225E91B4009E810C /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
-		A97BD40B225EA9F30008141A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BACBE74A98578959AEE0A2B8 /* Pods-CleanUpYourCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCityTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanUpYourCityTests/Pods-CleanUpYourCityTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BCF912AB2263F48500D2B83C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BCF912AE226408D200D2B83C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		BCF912B02264090000D2B83C /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
+		BCF912B2226529F400D2B83C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2C63D2AF6CABB77375724CD /* Pods-CleanUpYourCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCity.release.xcconfig"; path = "Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity.release.xcconfig"; sourceTree = "<group>"; };
 		DA64C0477E298430D256E1C7 /* Pods_CleanUpYourCityUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanUpYourCityUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,9 +140,11 @@
 		85CEEB3F224C2A0000CAC35B /* CleanUpYourCity */ = {
 			isa = PBXGroup;
 			children = (
+				BCF912AD226408AD00D2B83C /* CustomViews */,
 				85CEEB40224C2A0000CAC35B /* AppDelegate.swift */,
 				85CEEB42224C2A0000CAC35B /* ViewController.swift */,
 				85CEEB44224C2A0000CAC35B /* Main.storyboard */,
+				BCF912AB2263F48500D2B83C /* LoginViewController.swift */,
 				85CEEB47224C2A0000CAC35B /* Assets.xcassets */,
 				85CEEB49224C2A0000CAC35B /* LaunchScreen.storyboard */,
 				85CEEB4C224C2A0000CAC35B /* Info.plist */,
@@ -144,7 +152,7 @@
 				A33EECEA225E91A4009E810C /* Add.storyboard */,
 				A33EECEC225E91B4009E810C /* EditProfile.storyboard */,
 				A30CF145225E98D300678871 /* Profile.storyboard */,
-				A97BD40B225EA9F30008141A /* GoogleService-Info.plist */,
+				BCF912B2226529F400D2B83C /* GoogleService-Info.plist */,
 			);
 			path = CleanUpYourCity;
 			sourceTree = "<group>";
@@ -167,6 +175,15 @@
 			path = CleanUpYourCityUITests;
 			sourceTree = "<group>";
 		};
+		BCF912AD226408AD00D2B83C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				BCF912AE226408D200D2B83C /* CustomButton.swift */,
+				BCF912B02264090000D2B83C /* CustomTextfield.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		CF7986C697C4F27803D7F157 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +194,6 @@
 				15CBF5C1CFF65D6136F69E30 /* Pods-CleanUpYourCityUITests.debug.xcconfig */,
 				39CDF26818BDEDE3E20B7989 /* Pods-CleanUpYourCityUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -293,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CEEB4B224C2A0000CAC35B /* LaunchScreen.storyboard in Resources */,
-				A97BD40C225EA9F30008141A /* GoogleService-Info.plist in Resources */,
+				BCF912B3226529F400D2B83C /* GoogleService-Info.plist in Resources */,
 				A33EECED225E91B4009E810C /* EditProfile.storyboard in Resources */,
 				A33EECE7225E9154009E810C /* Event.storyboard in Resources */,
 				85CEEB48224C2A0000CAC35B /* Assets.xcassets in Resources */,
@@ -417,6 +433,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF912B12264090000D2B83C /* CustomTextfield.swift in Sources */,
+				BCF912AF226408D200D2B83C /* CustomButton.swift in Sources */,
+				BCF912AC2263F48500D2B83C /* LoginViewController.swift in Sources */,
 				85CEEB43224C2A0000CAC35B /* ViewController.swift in Sources */,
 				85CEEB41224C2A0000CAC35B /* AppDelegate.swift in Sources */,
 			);
