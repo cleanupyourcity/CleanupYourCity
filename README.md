@@ -34,19 +34,19 @@ still decide to withdraw their decision.
 ### 1. User Stories (Required and Optional)
 **Required Stories**
 
-[] User can register and login
-[] User can view garbage in their area
-[] User can add location to clean
-[] User can view profile info
-[] User can edit photo
-[] User can adopt garbage
+*[] User can register and login
+*[] User can view garbage in their area
+*[] User can add location to clean
+*[] User can view profile info
+*[] User can edit photo
+*[] User can adopt garbage
 
 
 **Optional Stories**
 
-[] User can view leaderboard
-[] User can up/down vote events
-[] User can leave comments on events
+*[] User can view leaderboard
+*[] User can up/down vote events
+*[] User can leave comments on events
 
 
 ### 2. Screen Archetypes
