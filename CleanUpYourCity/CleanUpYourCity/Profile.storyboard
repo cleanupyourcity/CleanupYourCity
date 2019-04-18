@@ -10,18 +10,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="G4z-ZX-HVX">
             <objects>
                 <viewController storyboardIdentifier="ProfileID" id="mIV-8b-zt9" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ProfileID" id="DSM-AR-jAA">
+                    <view key="view" contentMode="scaleToFill" id="uNV-X1-y59">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QtS-zp-lpa" userLabel="Profile Pic">
+                                <rect key="frame" x="20" y="94" width="125" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="71H-7W-NHi"/>
+                                    <constraint firstAttribute="height" constant="130" id="xln-Sy-q1q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ur-2h-U3l">
+                                <rect key="frame" x="175" y="94" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is where a Bio would go if the user wishes to have one. It would display information about them or their profile." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jpc-pR-JbK">
+                                <rect key="frame" x="175" y="130" width="170" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="bzZ-yk-bFw"/>
+                        <constraints>
+                            <constraint firstItem="QtS-zp-lpa" firstAttribute="leading" secondItem="Xfn-DP-EoN" secondAttribute="leading" constant="20" id="NIW-Xr-H2a"/>
+                            <constraint firstItem="QtS-zp-lpa" firstAttribute="top" secondItem="Xfn-DP-EoN" secondAttribute="top" constant="30" id="RBG-bK-Txt"/>
+                            <constraint firstItem="Xfn-DP-EoN" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="8Ur-2h-U3l" secondAttribute="trailing" constant="30" id="ZbO-FR-u7V"/>
+                            <constraint firstItem="8Ur-2h-U3l" firstAttribute="top" secondItem="Xfn-DP-EoN" secondAttribute="top" constant="30" id="bEb-dc-YAi"/>
+                            <constraint firstItem="Jpc-pR-JbK" firstAttribute="top" secondItem="8Ur-2h-U3l" secondAttribute="bottom" constant="15" id="eky-RN-Fgb"/>
+                            <constraint firstItem="8Ur-2h-U3l" firstAttribute="leading" secondItem="QtS-zp-lpa" secondAttribute="trailing" constant="30" id="lfL-jH-jAT"/>
+                            <constraint firstItem="Jpc-pR-JbK" firstAttribute="bottom" secondItem="QtS-zp-lpa" secondAttribute="bottom" id="qn9-Sn-uHl"/>
+                            <constraint firstItem="Xfn-DP-EoN" firstAttribute="trailing" secondItem="Jpc-pR-JbK" secondAttribute="trailing" constant="30" id="rGB-Z7-hmM"/>
+                            <constraint firstItem="Jpc-pR-JbK" firstAttribute="leading" secondItem="QtS-zp-lpa" secondAttribute="trailing" constant="30" id="t4K-G0-Na6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xfn-DP-EoN"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="4Eu-w9-IZ4">
+                    <navigationItem key="navigationItem" title="Profile" id="4Eu-w9-IZ4">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="ksZ-Cs-yqn">
                             <connections>
                                 <segue destination="ZDP-UH-YNe" kind="show" id="RKj-rT-9kD"/>
