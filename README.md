@@ -34,11 +34,11 @@ still decide to withdraw their decision.
 ### 1. User Stories (Required and Optional)
 **Required Stories**
 
-* [] User can register and login
+* [X] User can register and login
 * [] User can view garbage in their area
 * [] User can add location to clean
 * [] User can view profile info
-* [] User can edit photo
+* [] User can edit photo/profile
 * [] User can adopt garbage
 
 
