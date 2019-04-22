@@ -75,7 +75,9 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="SIGN IN"/>
                                         <connections>
+
                                             <segue destination="dYC-Rl-IKj" kind="show" id="Uem-DD-O6S"/>
+
                                         </connections>
                                     </button>
                                 </subviews>
