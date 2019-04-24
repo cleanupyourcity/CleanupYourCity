@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15E55A502B0C3129D294FF9B /* Pods_CleanUpYourCityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E98562B8DD00763E11AAF3 /* Pods_CleanUpYourCityUITests.framework */; };
+		7240FB67226FCF0A006A10D1 /* CamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240FB66226FCF0A006A10D1 /* CamViewController.swift */; };
 		85CEEB41224C2A0000CAC35B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEEB40224C2A0000CAC35B /* AppDelegate.swift */; };
 		85CEEB43224C2A0000CAC35B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEEB42224C2A0000CAC35B /* ViewController.swift */; };
 		85CEEB46224C2A0000CAC35B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CEEB44224C2A0000CAC35B /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		437F4C17C3938E1EC313C3A9 /* Pods-CleanUpYourCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCity.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity.release.xcconfig"; sourceTree = "<group>"; };
+		7240FB66226FCF0A006A10D1 /* CamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamViewController.swift; sourceTree = "<group>"; };
 		7B311A28ED61F11C2ACBC347 /* Pods-CleanUpYourCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCityTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCityTests/Pods-CleanUpYourCityTests.release.xcconfig"; sourceTree = "<group>"; };
 		8209B6C432009AA9C672BA06 /* Pods-CleanUpYourCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCityTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCityTests/Pods-CleanUpYourCityTests.debug.xcconfig"; sourceTree = "<group>"; };
 		85CEEB3D224C2A0000CAC35B /* CleanUpYourCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanUpYourCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 				A33EECE6225E9154009E810C /* Event.storyboard */,
 				A33EECEA225E91A4009E810C /* Add.storyboard */,
 				A33EECEC225E91B4009E810C /* EditProfile.storyboard */,
+				7240FB66226FCF0A006A10D1 /* CamViewController.swift */,
 				A30CF145225E98D300678871 /* Profile.storyboard */,
 				BCF912B2226529F400D2B83C /* GoogleService-Info.plist */,
 			);
@@ -367,6 +370,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -374,6 +379,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -433,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7240FB67226FCF0A006A10D1 /* CamViewController.swift in Sources */,
 				BCF912B12264090000D2B83C /* CustomTextfield.swift in Sources */,
 				BCF912AF226408D200D2B83C /* CustomButton.swift in Sources */,
 				BCF912AC2263F48500D2B83C /* LoginViewController.swift in Sources */,
