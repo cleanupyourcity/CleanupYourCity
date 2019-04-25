@@ -13,7 +13,10 @@ class CamViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var onSubmitButton: UIButton!
+    @IBAction func onSubmitButton(_ sender: Any)
+    {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

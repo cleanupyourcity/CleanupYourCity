@@ -48,40 +48,50 @@
                                                             </state>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of garbage to clean" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAT-tP-6j0">
-                                                            <rect key="frame" x="15" y="11" width="209" height="21.5"/>
+                                                            <rect key="frame" x="15" y="11" width="209" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points Earned: 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-iv-mkd">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Points Earned: 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-iv-mkd">
                                                             <rect key="frame" x="65" y="80" width="199" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Severity: High" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Li-rl-tfs">
-                                                            <rect key="frame" x="79" y="60.5" width="170" height="19.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severity: High" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Li-rl-tfs">
+                                                            <rect key="frame" x="114" y="61" width="101.5" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="4/20/19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AZ-ZA-cIf">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4/20/19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AZ-ZA-cIf">
                                                             <rect key="frame" x="249" y="11" width="63" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="7G5-hl-KVy"/>
+                                                                <constraint firstAttribute="width" constant="63" id="Y1d-OU-HaJ"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="ADF-4V-OQF" firstAttribute="top" secondItem="6dU-iv-mkd" secondAttribute="bottom" constant="1" id="79A-D0-SmP"/>
                                                         <constraint firstItem="ADF-4V-OQF" firstAttribute="top" secondItem="oCk-tf-Dnn" secondAttribute="topMargin" constant="91" id="7z7-Od-t3K"/>
                                                         <constraint firstItem="bAT-tP-6j0" firstAttribute="leading" secondItem="oCk-tf-Dnn" secondAttribute="leadingMargin" id="807-IG-25w"/>
                                                         <constraint firstItem="9Li-rl-tfs" firstAttribute="top" secondItem="bAT-tP-6j0" secondAttribute="bottom" constant="28" id="9BZ-ZO-0JI"/>
+                                                        <constraint firstItem="6dU-iv-mkd" firstAttribute="centerX" secondItem="9Li-rl-tfs" secondAttribute="centerX" id="9Us-Zz-CHE"/>
                                                         <constraint firstItem="bAT-tP-6j0" firstAttribute="top" secondItem="oCk-tf-Dnn" secondAttribute="topMargin" id="Nr8-db-xgG"/>
+                                                        <constraint firstItem="1AZ-ZA-cIf" firstAttribute="baseline" secondItem="bAT-tP-6j0" secondAttribute="baseline" id="PgZ-mZ-024"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="ADF-4V-OQF" secondAttribute="trailing" constant="119" id="PyQ-cQ-rSW"/>
+                                                        <constraint firstItem="6dU-iv-mkd" firstAttribute="top" secondItem="1AZ-ZA-cIf" secondAttribute="bottom" constant="48" id="YYX-ZK-Zlc"/>
                                                         <constraint firstItem="ADF-4V-OQF" firstAttribute="leading" secondItem="oCk-tf-Dnn" secondAttribute="leadingMargin" constant="119" id="ZYf-kt-pss"/>
+                                                        <constraint firstItem="1AZ-ZA-cIf" firstAttribute="top" secondItem="bAT-tP-6j0" secondAttribute="top" id="Zql-HF-ktK"/>
                                                         <constraint firstItem="ADF-4V-OQF" firstAttribute="bottom" secondItem="oCk-tf-Dnn" secondAttribute="bottomMargin" id="ekm-b0-yvF"/>
                                                         <constraint firstItem="ADF-4V-OQF" firstAttribute="bottom" secondItem="oCk-tf-Dnn" secondAttribute="bottomMargin" id="fzR-sf-N68"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="6dU-iv-mkd" secondAttribute="trailing" constant="47" id="pw4-nE-XMB"/>
+                                                        <constraint firstItem="6dU-iv-mkd" firstAttribute="leading" secondItem="oCk-tf-Dnn" secondAttribute="leadingMargin" constant="49" id="qdT-fd-WXG"/>
                                                         <constraint firstItem="ADF-4V-OQF" firstAttribute="centerX" secondItem="oCk-tf-Dnn" secondAttribute="centerX" id="sFH-Ld-xDP"/>
                                                         <constraint firstItem="1AZ-ZA-cIf" firstAttribute="leading" secondItem="bAT-tP-6j0" secondAttribute="trailing" constant="10" id="usq-oC-sPG"/>
                                                     </constraints>
@@ -182,6 +192,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="jvr-EJ-VmW" eventType="touchUpInside" id="WkU-yw-uc8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.44166588400000001" green="0.95448082619999997" blue="0.29120853870000002" alpha="0.74555864729999999" colorSpace="custom" customColorSpace="displayP3"/>
@@ -197,7 +210,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="99u-N6-52M" id="dQe-Em-Etc"/>
-                        <outlet property="onSubmitButton" destination="Sxe-n2-yAV" id="uQF-YZ-oxf"/>
+                        <outlet property="onSubmitButton" destination="Sxe-n2-yAV" id="u5d-SX-XMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZh-9S-g3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
