@@ -8,6 +8,8 @@ target 'CleanUpYourCity' do
   # Pods for CleanUpYourCity
   pod 'Firebase/Core'
   pod 'AlamofireImage'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'CleanUpYourCityTests' do
     inherit! :search_paths

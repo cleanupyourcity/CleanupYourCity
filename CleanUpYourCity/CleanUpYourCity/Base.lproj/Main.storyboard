@@ -75,9 +75,7 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="SIGN IN"/>
                                         <connections>
-
                                             <segue destination="dYC-Rl-IKj" kind="show" id="Uem-DD-O6S"/>
-
                                         </connections>
                                     </button>
                                 </subviews>
@@ -107,6 +105,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="keepYourCityClean" width="3264" height="2448"/>
+        <image name="keepYourCityClean" width="783.3599853515625" height="587.52001953125"/>
     </resources>
 </document>

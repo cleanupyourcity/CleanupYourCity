@@ -118,6 +118,7 @@
                                     <color key="titleColor" red="0.94328997459999997" green="0.14258163139999999" blue="0.053208791210000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="cameraSubmitButton:" destination="LQw-lR-XS9" eventType="touchUpInside" id="mfc-1g-MFs"/>
                                     <segue destination="jvr-EJ-VmW" kind="show" id="C0S-ON-P2p"/>
                                 </connections>
                             </button>
@@ -167,13 +168,14 @@
                     <navigationItem key="navigationItem" title="Edit Profile" id="NdP-FV-Frz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmT-ql-PTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LQw-lR-XS9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="975.20000000000005" y="-16.641679160419791"/>
         </scene>
-        <!--Cam View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="9tM-dB-KlR">
             <objects>
-                <viewController id="jvr-EJ-VmW" customClass="CamViewController" customModule="CleanUpYourCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jvr-EJ-VmW" customClass="CameraViewController" customModule="CleanUpYourCity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DaO-Ig-uUl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +184,7 @@
                                 <rect key="frame" x="16" y="64" width="343" height="375"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="GkR-zm-Emw" appends="YES" id="d4f-aE-kQH"/>
+                                    <outletCollection property="gestureRecognizers" destination="5Ww-PF-HXa" appends="YES" id="t2R-nQ-eRe"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-n2-yAV">
@@ -193,7 +195,7 @@
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onSubmitButton:" destination="jvr-EJ-VmW" eventType="touchUpInside" id="WkU-yw-uc8"/>
+                                    <action selector="onSubmitButton:" destination="jvr-EJ-VmW" eventType="touchUpInside" id="hdv-9a-QKr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -209,14 +211,13 @@
                         <viewLayoutGuide key="safeArea" id="Vyq-an-zG7"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="99u-N6-52M" id="dQe-Em-Etc"/>
-                        <outlet property="onSubmitButton" destination="Sxe-n2-yAV" id="u5d-SX-XMD"/>
+                        <outlet property="imageView" destination="99u-N6-52M" id="u7b-wW-svl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZh-9S-g3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="GkR-zm-Emw">
+                <tapGestureRecognizer id="5Ww-PF-HXa">
                     <connections>
-                        <action selector="onCameraSubmit:" destination="jvr-EJ-VmW" id="PHP-u8-j3s"/>
+                        <action selector="onCameraSubmit:" destination="jvr-EJ-VmW" id="7fM-02-hlV"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

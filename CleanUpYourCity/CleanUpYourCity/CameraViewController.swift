@@ -7,22 +7,25 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBAction func onSubmitButton(_ sender: Any)
-    {
-        
+    @IBAction func onSubmitButton(_ sender: Any) {
     }
+    
+    
     
     //    @IBAction func onTap(_ sender: Any) {
     //        self.performSegue(withIdentifier: "ChangePic", sender: self)
     //
     //    }
-    @IBAction func cameraSubmitButton(_ sender: Any)
-    {
+
+
+    
+    @IBAction func onCameraSubmit(_ sender: Any) {
         let picker = UIImagePickerController()
         
         // calls a function that has the photo
@@ -42,12 +45,15 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         present(picker, animated: true, completion: nil)
     }
     
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         let size = CGSize(width: 300, height: 300)
-        //let scaledImage = image.af_imageScaled
+        let scaledImage =
+            image.af_imageScaled(to: size)
         
-        imageView.image = image
+        imageView.image = scaledImage
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
