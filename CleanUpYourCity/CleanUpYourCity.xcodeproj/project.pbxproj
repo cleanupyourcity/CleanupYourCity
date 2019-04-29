@@ -21,6 +21,8 @@
 		A33EECE7225E9154009E810C /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECE6225E9154009E810C /* Event.storyboard */; };
 		A33EECEB225E91A4009E810C /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEA225E91A4009E810C /* Add.storyboard */; };
 		A33EECED225E91B4009E810C /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEC225E91B4009E810C /* EditProfile.storyboard */; };
+		A3FA27CE2277AB58006B82F1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA27CD2277AB58006B82F1 /* ProfileViewController.swift */; };
+		A3FA27D02277AE69006B82F1 /* historyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA27CF2277AE69006B82F1 /* historyCell.swift */; };
 		A96BFD5622778CDF0054C413 /* GarbageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BFD5422778CDF0054C413 /* GarbageTableViewController.swift */; };
 		A96BFD5722778CDF0054C413 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BFD5522778CDF0054C413 /* MapViewController.swift */; };
 		BCE1FF01227797CD0001078F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1FF00227797CD0001078F /* RegisterViewController.swift */; };
@@ -71,6 +73,8 @@
 		A33EECE6225E9154009E810C /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		A33EECEA225E91A4009E810C /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
 		A33EECEC225E91B4009E810C /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
+		A3FA27CD2277AB58006B82F1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A3FA27CF2277AE69006B82F1 /* historyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyCell.swift; sourceTree = "<group>"; };
 		A96BFD5422778CDF0054C413 /* GarbageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarbageTableViewController.swift; sourceTree = "<group>"; };
 		A96BFD5522778CDF0054C413 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B40820BB04D3892106B4E81C /* Pods-CleanUpYourCityUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCityUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCityUITests/Pods-CleanUpYourCityUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,7 +181,9 @@
 				A33EECEA225E91A4009E810C /* Add.storyboard */,
 				A33EECEC225E91B4009E810C /* EditProfile.storyboard */,
 				A30CF145225E98D300678871 /* Profile.storyboard */,
+				A3FA27CF2277AE69006B82F1 /* historyCell.swift */,
 				BCF912B2226529F400D2B83C /* GoogleService-Info.plist */,
+				A3FA27CD2277AB58006B82F1 /* ProfileViewController.swift */,
 			);
 			path = CleanUpYourCity;
 			sourceTree = "<group>";
@@ -354,15 +360,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CleanUpYourCity-checkManifestLockResult.txt",
 			);
@@ -376,8 +378,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
@@ -388,8 +388,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
@@ -408,15 +406,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CleanUpYourCityUITests-checkManifestLockResult.txt",
 			);
@@ -430,15 +424,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CleanUpYourCityTests-checkManifestLockResult.txt",
 			);
@@ -452,15 +442,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 			);
@@ -478,7 +464,9 @@
 			files = (
 				BCE1FF01227797CD0001078F /* RegisterViewController.swift in Sources */,
 				BCF912B12264090000D2B83C /* CustomTextfield.swift in Sources */,
+				A3FA27CE2277AB58006B82F1 /* ProfileViewController.swift in Sources */,
 				BCF912AF226408D200D2B83C /* CustomButton.swift in Sources */,
+				A3FA27D02277AE69006B82F1 /* historyCell.swift in Sources */,
 				BCF912AC2263F48500D2B83C /* LoginViewController.swift in Sources */,
 				85CEEB43224C2A0000CAC35B /* ViewController.swift in Sources */,
 				A96BFD5622778CDF0054C413 /* GarbageTableViewController.swift in Sources */,
