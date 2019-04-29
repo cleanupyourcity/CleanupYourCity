@@ -10,14 +10,89 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="9WL-6z-oAs">
             <objects>
-                <viewController id="oQS-wr-Jbg" sceneMemberID="viewController">
+                <viewController id="oQS-wr-Jbg" customClass="MapViewController" customModule="CleanUpYourCity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qww-Ea-zPN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MfN-0G-khb">
+                                <rect key="frame" x="16" y="348" width="343" height="299"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="299" id="ena-8r-yXu"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Event Cell" rowHeight="97" id="thy-2G-fYI" customClass="GarbageTableViewCell" customModule="CleanUpYourCity" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="thy-2G-fYI" id="6Vf-0C-gtg">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="96.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpm-X8-Nw3">
+                                                    <rect key="frame" x="64" y="0.0" width="279" height="66.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biohazardIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uoT-rs-WIO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="5hI-k5-S66"/>
+                                                        <constraint firstAttribute="width" constant="64" id="Ebv-Hf-v8B"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Event Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bg-2H-FOg">
+                                                    <rect key="frame" x="64" y="66" width="264" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mpm-X8-Nw3" firstAttribute="top" secondItem="6Vf-0C-gtg" secondAttribute="top" id="2RE-q0-SzT"/>
+                                                <constraint firstAttribute="trailing" secondItem="mpm-X8-Nw3" secondAttribute="trailing" id="6Cp-b2-pcG"/>
+                                                <constraint firstItem="mpm-X8-Nw3" firstAttribute="top" secondItem="6Vf-0C-gtg" secondAttribute="top" id="FgB-tI-g04"/>
+                                                <constraint firstItem="0bg-2H-FOg" firstAttribute="top" secondItem="mpm-X8-Nw3" secondAttribute="bottom" id="GCk-tW-pqG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0bg-2H-FOg" secondAttribute="trailing" id="LZz-Lg-efA"/>
+                                                <constraint firstItem="mpm-X8-Nw3" firstAttribute="leading" secondItem="uoT-rs-WIO" secondAttribute="trailing" id="Mdk-gJ-kkm"/>
+                                                <constraint firstItem="0bg-2H-FOg" firstAttribute="leading" secondItem="uoT-rs-WIO" secondAttribute="trailing" id="St6-B0-GQX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0bg-2H-FOg" secondAttribute="bottom" constant="-1" id="Vpe-a0-EW6"/>
+                                                <constraint firstItem="uoT-rs-WIO" firstAttribute="top" secondItem="6Vf-0C-gtg" secondAttribute="top" id="WSS-F5-lbJ"/>
+                                                <constraint firstItem="mpm-X8-Nw3" firstAttribute="top" secondItem="6Vf-0C-gtg" secondAttribute="top" id="b6Q-L3-Ilx"/>
+                                                <constraint firstItem="uoT-rs-WIO" firstAttribute="leading" secondItem="6Vf-0C-gtg" secondAttribute="leading" id="byh-Ia-5In"/>
+                                                <constraint firstItem="0bg-2H-FOg" firstAttribute="top" secondItem="mpm-X8-Nw3" secondAttribute="bottom" id="mdd-ri-c2s"/>
+                                                <constraint firstItem="mpm-X8-Nw3" firstAttribute="leading" secondItem="uoT-rs-WIO" secondAttribute="trailing" id="vIH-Pl-fOx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="eventDesc" destination="0bg-2H-FOg" id="tZE-on-0X7"/>
+                                            <outlet property="eventName" destination="mpm-X8-Nw3" id="Lqa-Mc-dce"/>
+                                            <outlet property="eventPic" destination="uoT-rs-WIO" id="JFh-Tb-7c2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukj-MQ-7ft" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="86" width="343" height="248"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.44166588400000001" green="0.95448082619999997" blue="0.29120853870000002" alpha="0.74555864729999999" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="r1Q-y8-y32" firstAttribute="bottom" secondItem="MfN-0G-khb" secondAttribute="bottom" constant="20" id="ARr-t1-Hku"/>
+                            <constraint firstItem="r1Q-y8-y32" firstAttribute="trailing" secondItem="MfN-0G-khb" secondAttribute="trailing" constant="16" id="P8w-uN-Dae"/>
+                            <constraint firstItem="MfN-0G-khb" firstAttribute="leading" secondItem="r1Q-y8-y32" secondAttribute="leading" constant="16" id="XM0-dN-qyf"/>
+                            <constraint firstItem="MfN-0G-khb" firstAttribute="top" secondItem="ukj-MQ-7ft" secondAttribute="bottom" constant="14" id="oJn-NN-WPB"/>
+                            <constraint firstItem="ukj-MQ-7ft" firstAttribute="leading" secondItem="r1Q-y8-y32" secondAttribute="leading" constant="16" id="sV0-3J-Kbx"/>
+                            <constraint firstItem="MfN-0G-khb" firstAttribute="top" secondItem="ukj-MQ-7ft" secondAttribute="bottom" constant="14" id="uaj-Ra-yBi"/>
+                            <constraint firstItem="r1Q-y8-y32" firstAttribute="trailing" secondItem="ukj-MQ-7ft" secondAttribute="trailing" constant="16" id="wdP-i6-3hq"/>
+                            <constraint firstItem="ukj-MQ-7ft" firstAttribute="top" secondItem="r1Q-y8-y32" secondAttribute="top" constant="22" id="x2Y-ym-du4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="r1Q-y8-y32"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Rk-N0-7m4">
@@ -32,6 +107,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="gMapView" destination="ukj-MQ-7ft" id="P7S-ZP-PpA"/>
+                        <outlet property="tableView" destination="MfN-0G-khb" id="gYI-Ri-vwx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ll7-Ju-yEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,4 +151,7 @@
             <point key="canvasLocation" x="180" y="141.67916041979012"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="biohazardIcon" width="491.51998901367188" height="491.51998901367188"/>
+    </resources>
 </document>

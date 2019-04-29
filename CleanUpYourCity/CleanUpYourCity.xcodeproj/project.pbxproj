@@ -21,6 +21,8 @@
 		A33EECE7225E9154009E810C /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECE6225E9154009E810C /* Event.storyboard */; };
 		A33EECEB225E91A4009E810C /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEA225E91A4009E810C /* Add.storyboard */; };
 		A33EECED225E91B4009E810C /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEC225E91B4009E810C /* EditProfile.storyboard */; };
+		A96BFD5622778CDF0054C413 /* GarbageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BFD5422778CDF0054C413 /* GarbageTableViewController.swift */; };
+		A96BFD5722778CDF0054C413 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BFD5522778CDF0054C413 /* MapViewController.swift */; };
 		BCF912AC2263F48500D2B83C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF912AB2263F48500D2B83C /* LoginViewController.swift */; };
 		BCF912AF226408D200D2B83C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF912AE226408D200D2B83C /* CustomButton.swift */; };
 		BCF912B12264090000D2B83C /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF912B02264090000D2B83C /* CustomTextfield.swift */; };
@@ -68,6 +70,8 @@
 		A33EECE6225E9154009E810C /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		A33EECEA225E91A4009E810C /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
 		A33EECEC225E91B4009E810C /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
+		A96BFD5422778CDF0054C413 /* GarbageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarbageTableViewController.swift; sourceTree = "<group>"; };
+		A96BFD5522778CDF0054C413 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B40820BB04D3892106B4E81C /* Pods-CleanUpYourCityUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCityUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCityUITests/Pods-CleanUpYourCityUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B977D84B4047F54D2B34CDC1 /* Pods-CleanUpYourCityUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCityUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCityUITests/Pods-CleanUpYourCityUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BB5EDDD5095FC8B84D75F902 /* Pods-CleanUpYourCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				85CEEB42224C2A0000CAC35B /* ViewController.swift */,
 				85CEEB44224C2A0000CAC35B /* Main.storyboard */,
 				BCF912AB2263F48500D2B83C /* LoginViewController.swift */,
+				A96BFD5422778CDF0054C413 /* GarbageTableViewController.swift */,
+				A96BFD5522778CDF0054C413 /* MapViewController.swift */,
 				7240FB6A22722B92006A10D1 /* CameraViewController.swift */,
 				85CEEB47224C2A0000CAC35B /* Assets.xcassets */,
 				85CEEB49224C2A0000CAC35B /* LaunchScreen.storyboard */,
@@ -212,6 +218,7 @@
 				85CEEB3A224C2A0000CAC35B /* Frameworks */,
 				85CEEB3B224C2A0000CAC35B /* Resources */,
 				63A7881FAC9C3C18DB52E97A /* [CP] Embed Pods Frameworks */,
+				B2B48E215665F8A851330349 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,7 +376,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -390,7 +397,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6A3E940C960D8E9C4BABDA4A /* [CP] Check Pods Manifest.lock */ = {
@@ -437,6 +444,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B2B48E215665F8A851330349 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -448,8 +477,10 @@
 				BCF912AF226408D200D2B83C /* CustomButton.swift in Sources */,
 				BCF912AC2263F48500D2B83C /* LoginViewController.swift in Sources */,
 				85CEEB43224C2A0000CAC35B /* ViewController.swift in Sources */,
+				A96BFD5622778CDF0054C413 /* GarbageTableViewController.swift in Sources */,
 				85CEEB41224C2A0000CAC35B /* AppDelegate.swift in Sources */,
 				7240FB6B22722B92006A10D1 /* CameraViewController.swift in Sources */,
+				A96BFD5722778CDF0054C413 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
