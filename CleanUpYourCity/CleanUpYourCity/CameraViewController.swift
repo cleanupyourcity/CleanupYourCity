@@ -8,21 +8,30 @@
 
 import UIKit
 import AlamofireImage
+import Firebase
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var imageView: UIImageView!
+    var ref: DatabaseReference!
+    let userID = Auth.auth().currentUser?.uid
     
-    @IBAction func onSubmitButton(_ sender: Any)
-    {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var onSubmitButton: UIButton!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        self.ref = Database.database().reference()
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Register cell classes
+        
+        // Do any additional setup after loading the view.
     }
     
-    //    @IBAction func onTap(_ sender: Any) {
-    //        self.performSegue(withIdentifier: "ChangePic", sender: self)
-    //
-    //    }
-    @IBAction func cameraSubmitButton(_ sender: Any)
+    @IBAction func onCameraSubmitButton(_ sender: Any)
     {
         let picker = UIImagePickerController()
         
@@ -43,6 +52,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         present(picker, animated: true, completion: nil)
     }
     
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         let size = CGSize(width: 300, height: 300)
@@ -52,25 +62,43 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         dismiss(animated: true, completion: nil)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Register cell classes
-        
-        // Do any additional setup after loading the view.
+   /*
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
+     
+   */
+    
+    
+    
+    
+    @IBAction func onSubmitButton(_ sender: Any)
+    {
+         // performSegue(withIdentifier: "profileSegue", sender: nil)
+        self.navigationController?.popViewController(animated: true)
+
+    }
+ 
+    
+    
+    
+    /*
+        @IBAction func onTap(_ sender: Any) {
+            self.performSegue(withIdentifier: "ChangePic", sender: self)
+    
+        }
+    */
+    
+    
+    
+    
+
 
     /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
     */
 
 }

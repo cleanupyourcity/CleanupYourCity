@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="975.20000000000005" y="-16.641679160419791"/>
         </scene>
-        <!--Cam View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="9tM-dB-KlR">
             <objects>
-                <viewController id="jvr-EJ-VmW" customClass="CamViewController" customModule="CleanUpYourCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jvr-EJ-VmW" customClass="CameraViewController" customModule="CleanUpYourCity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DaO-Ig-uUl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,7 +194,7 @@
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onSubmitButton:" destination="jvr-EJ-VmW" eventType="touchUpInside" id="WkU-yw-uc8"/>
+                                    <action selector="onSubmitButton:" destination="jvr-EJ-VmW" eventType="touchUpInside" id="wta-CO-hLt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -211,13 +211,13 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="99u-N6-52M" id="dQe-Em-Etc"/>
-                        <outlet property="onSubmitButton" destination="Sxe-n2-yAV" id="u5d-SX-XMD"/>
+                        <outlet property="onSubmitButton" destination="Sxe-n2-yAV" id="h1X-Ah-BTY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZh-9S-g3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="GkR-zm-Emw">
                     <connections>
-                        <action selector="onCameraSubmit:" destination="jvr-EJ-VmW" id="PHP-u8-j3s"/>
+                        <action selector="onCameraSubmitButton:" destination="jvr-EJ-VmW" id="rCk-9C-VJu"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
