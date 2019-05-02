@@ -28,6 +28,9 @@ class RegisterViewController: UIViewController {
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginPage = storyboard.instantiateViewController(withIdentifier: "loginView")
         
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if(error != nil)
             {
@@ -38,8 +41,12 @@ class RegisterViewController: UIViewController {
             else
             {
                 print("Registration succesful!")
-                self.present(loginPage, animated:true, completion:nil)
+                
+                let user = Auth.auth().currentUser?.uid
+                ref.child("profile").child(user!).setValue(["username":self.usernameTextField.text])
+                
             }
+            self.present(loginPage, animated:true, completion:nil)
         }
     }
     
