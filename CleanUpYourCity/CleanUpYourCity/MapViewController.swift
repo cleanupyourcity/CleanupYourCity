@@ -42,7 +42,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FirebaseApp.configure()
+       // FirebaseApp.configure()
 
         refEvent = Database.database().reference().child("events");
         
@@ -70,13 +70,13 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                         
                         //getting values
                         let eventObject = events.value as? [String: AnyObject]
-                        let poster  = eventObject?["eventPoster"]
+                        let poster  = eventObject?["eventAuthorID"]
                         let description  = eventObject?["eventDescription"]
-                        let dangerLevel  = eventObject?["eventDangerLevel"]
+                        let severity  = eventObject?["eventSeverityLevel"]
                         let name = eventObject?["eventName"]
 
                         //creating event object with model and fetched values
-                        let event = Event(eventDangerLevel: dangerLevel as! String?,
+                        let event = Event(eventSeverityLevel: severity as! String?,
                                           eventDescription: description as! String?,
                                           eventPoster: poster as! String?,
                                           eventName: name as! String?)
@@ -88,11 +88,6 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                     self.tableView.reloadData()
                 }
             })
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -111,18 +106,23 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         //adding values to labels
         
-        //      cell.eventDescription.text = event.eventDescription
+              cell.eventDescription.text = event.eventDescription
         //     cell.eventDangerLevel.text = event.eventDangerLevel
         //    cell.eventPoster.text = event.eventPoster
-        //   cell.eventName.text = event.eventName
+           cell.eventName.text = event.eventName
         
         
         
-        cell.eventName.text = "Event Demo"
-        cell.eventDescription.text = "Event Descprtion for u for me to give you all the love in the world :)"
+      //  cell.eventName.text = "Event Demo"
+       // cell.eventDescription.text = "Event Descprtion for u for me to give you all the love in the world :)"
         
         //returning cell
         return cell
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 

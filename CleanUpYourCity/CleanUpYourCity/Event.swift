@@ -19,14 +19,14 @@ class Event {
 //    "garbageExampleID"
    
     
-    var eventDangerLevel: String?
+    var eventSeverityLevel: String?
     var eventDescription: String?
     var eventPoster: String?
     var eventName: String?
     
-    init(eventDangerLevel: String?, eventDescription: String?, eventPoster: String?, eventName: String?){
+    init(eventSeverityLevel: String?, eventDescription: String?, eventPoster: String?, eventName: String?){
         self.eventDescription = eventDescription
-        self.eventDangerLevel = eventDangerLevel
+        self.eventSeverityLevel = eventSeverityLevel
         self.eventPoster = eventPoster
         self.eventName = eventName
     }
