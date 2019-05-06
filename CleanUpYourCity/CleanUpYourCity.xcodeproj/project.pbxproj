@@ -23,8 +23,8 @@
 		A33EECED225E91B4009E810C /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEC225E91B4009E810C /* EditProfile.storyboard */; };
 		A3FA27CE2277AB58006B82F1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA27CD2277AB58006B82F1 /* ProfileViewController.swift */; };
 		A3FA27D02277AE69006B82F1 /* historyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA27CF2277AE69006B82F1 /* historyCell.swift */; };
-		A96BFD5622778CDF0054C413 /* GarbageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BFD5422778CDF0054C413 /* GarbageTableViewController.swift */; };
 		A96BFD5722778CDF0054C413 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BFD5522778CDF0054C413 /* MapViewController.swift */; };
+		A96BFD59227A451C0054C413 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BFD58227A451C0054C413 /* Event.swift */; };
 		BCE1FF01227797CD0001078F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1FF00227797CD0001078F /* RegisterViewController.swift */; };
 		BCF912AC2263F48500D2B83C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF912AB2263F48500D2B83C /* LoginViewController.swift */; };
 		BCF912AF226408D200D2B83C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF912AE226408D200D2B83C /* CustomButton.swift */; };
@@ -75,8 +75,8 @@
 		A33EECEC225E91B4009E810C /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		A3FA27CD2277AB58006B82F1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A3FA27CF2277AE69006B82F1 /* historyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyCell.swift; sourceTree = "<group>"; };
-		A96BFD5422778CDF0054C413 /* GarbageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarbageTableViewController.swift; sourceTree = "<group>"; };
 		A96BFD5522778CDF0054C413 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A96BFD58227A451C0054C413 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B40820BB04D3892106B4E81C /* Pods-CleanUpYourCityUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCityUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCityUITests/Pods-CleanUpYourCityUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B977D84B4047F54D2B34CDC1 /* Pods-CleanUpYourCityUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCityUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCityUITests/Pods-CleanUpYourCityUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BB5EDDD5095FC8B84D75F902 /* Pods-CleanUpYourCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,19 +171,19 @@
 				85CEEB44224C2A0000CAC35B /* Main.storyboard */,
 				BCF912AB2263F48500D2B83C /* LoginViewController.swift */,
 				BCE1FF00227797CD0001078F /* RegisterViewController.swift */,
-				A96BFD5422778CDF0054C413 /* GarbageTableViewController.swift */,
+				A33EECE6225E9154009E810C /* Event.storyboard */,
 				A96BFD5522778CDF0054C413 /* MapViewController.swift */,
+				A96BFD58227A451C0054C413 /* Event.swift */,
 				7240FB6A22722B92006A10D1 /* CameraViewController.swift */,
 				85CEEB47224C2A0000CAC35B /* Assets.xcassets */,
 				85CEEB49224C2A0000CAC35B /* LaunchScreen.storyboard */,
 				85CEEB4C224C2A0000CAC35B /* Info.plist */,
-				A33EECE6225E9154009E810C /* Event.storyboard */,
 				A33EECEA225E91A4009E810C /* Add.storyboard */,
 				A33EECEC225E91B4009E810C /* EditProfile.storyboard */,
 				A30CF145225E98D300678871 /* Profile.storyboard */,
+				A3FA27CD2277AB58006B82F1 /* ProfileViewController.swift */,
 				A3FA27CF2277AE69006B82F1 /* historyCell.swift */,
 				BCF912B2226529F400D2B83C /* GoogleService-Info.plist */,
-				A3FA27CD2277AB58006B82F1 /* ProfileViewController.swift */,
 			);
 			path = CleanUpYourCity;
 			sourceTree = "<group>";
@@ -463,13 +463,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE1FF01227797CD0001078F /* RegisterViewController.swift in Sources */,
+				A96BFD59227A451C0054C413 /* Event.swift in Sources */,
 				BCF912B12264090000D2B83C /* CustomTextfield.swift in Sources */,
 				A3FA27CE2277AB58006B82F1 /* ProfileViewController.swift in Sources */,
 				BCF912AF226408D200D2B83C /* CustomButton.swift in Sources */,
 				A3FA27D02277AE69006B82F1 /* historyCell.swift in Sources */,
 				BCF912AC2263F48500D2B83C /* LoginViewController.swift in Sources */,
 				85CEEB43224C2A0000CAC35B /* ViewController.swift in Sources */,
-				A96BFD5622778CDF0054C413 /* GarbageTableViewController.swift in Sources */,
 				85CEEB41224C2A0000CAC35B /* AppDelegate.swift in Sources */,
 				7240FB6B22722B92006A10D1 /* CameraViewController.swift in Sources */,
 				A96BFD5722778CDF0054C413 /* MapViewController.swift in Sources */,
