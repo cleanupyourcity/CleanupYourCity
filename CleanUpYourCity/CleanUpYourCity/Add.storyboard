@@ -101,7 +101,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Gaa-Nd-DNf"/>
                                     <constraint firstAttribute="width" constant="40" id="SXN-4q-Cnp"/>
                                 </constraints>
-                                <state key="normal" title="GenericButton" image="garbageBagIcon"/>
+                                <state key="normal" title="GenericButton" image="0"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23u-Lj-9dM">
                                 <rect key="frame" x="297" y="262" width="40" height="40"/>
@@ -110,7 +110,7 @@
                                     <constraint firstAttribute="width" constant="40" id="dsf-cI-mY8"/>
                                     <constraint firstAttribute="height" constant="40" id="noY-2N-bBq"/>
                                 </constraints>
-                                <state key="normal" title="Recylcling Button" image="recyclingIcon"/>
+                                <state key="normal" title="Recylcling Button" image="1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4c-fW-Pnx">
                                 <rect key="frame" x="249" y="307" width="40" height="40"/>
@@ -119,7 +119,7 @@
                                     <constraint firstAttribute="width" constant="40" id="N3n-Rh-Puq"/>
                                     <constraint firstAttribute="height" constant="40" id="O84-fe-9Ox"/>
                                 </constraints>
-                                <state key="normal" title="GreenwasteButton" image="leafIcon"/>
+                                <state key="normal" title="GreenwasteButton" image="2"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGt-gS-0H8">
                                 <rect key="frame" x="297" y="307" width="40" height="40"/>
@@ -128,7 +128,7 @@
                                     <constraint firstAttribute="height" constant="40" id="CEI-Kj-xZm"/>
                                     <constraint firstAttribute="width" constant="40" id="Wag-uq-NpH"/>
                                 </constraints>
-                                <state key="normal" title="EwasteButton" image="eWasteIcon1"/>
+                                <state key="normal" title="EwasteButton" image="3"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knh-HX-odr">
                                 <rect key="frame" x="249" y="352" width="40" height="40"/>
@@ -137,7 +137,7 @@
                                     <constraint firstAttribute="height" constant="40" id="4ro-UI-Kan"/>
                                     <constraint firstAttribute="width" constant="40" id="Aah-Bm-KUm"/>
                                 </constraints>
-                                <state key="normal" title="RefuseButton" image="poopIcon"/>
+                                <state key="normal" title="RefuseButton" image="4"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug7-Ia-aRa">
                                 <rect key="frame" x="297" y="352" width="40" height="40"/>
@@ -146,7 +146,7 @@
                                     <constraint firstAttribute="width" constant="40" id="FXJ-Hm-6T4"/>
                                     <constraint firstAttribute="height" constant="40" id="JvE-iN-58b"/>
                                 </constraints>
-                                <state key="normal" title="NeedleButton" image="syringeIcon"/>
+                                <state key="normal" title="NeedleButton" image="5"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3V-eI-La7">
                                 <rect key="frame" x="297" y="397" width="40" height="40"/>
@@ -155,7 +155,7 @@
                                     <constraint firstAttribute="width" constant="40" id="9GW-yt-oOd"/>
                                     <constraint firstAttribute="height" constant="40" id="KP7-1W-0c7"/>
                                 </constraints>
-                                <state key="normal" title="BiohazardButton" image="biohazardIcon"/>
+                                <state key="normal" title="BiohazardButton" image="7"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5k-cu-yhe">
                                 <rect key="frame" x="249" y="397" width="40" height="40"/>
@@ -164,7 +164,7 @@
                                     <constraint firstAttribute="width" constant="40" id="8yO-WF-wmn"/>
                                     <constraint firstAttribute="height" constant="40" id="pJn-8U-vGK"/>
                                 </constraints>
-                                <state key="normal" title="ToxicwasteButton" image="poisonIcon"/>
+                                <state key="normal" title="ToxicwasteButton" image="6"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuM-bE-H7X">
                                 <rect key="frame" x="69" y="605" width="68" height="33"/>
@@ -271,13 +271,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="biohazardIcon" width="512" height="512"/>
-        <image name="eWasteIcon1" width="600" height="600"/>
-        <image name="garbageBagIcon" width="200" height="200"/>
-        <image name="leafIcon" width="512" height="512"/>
-        <image name="poisonIcon" width="200" height="200"/>
-        <image name="poopIcon" width="512" height="512"/>
-        <image name="recyclingIcon" width="200" height="200"/>
-        <image name="syringeIcon" width="512" height="512"/>
+        <image name="0" width="200" height="200"/>
+        <image name="1" width="200" height="200"/>
+        <image name="2" width="24.824241638183594" height="24.824241638183594"/>
+        <image name="3" width="600" height="600"/>
+        <image name="4" width="491.51998901367188" height="491.51998901367188"/>
+        <image name="5" width="512" height="512"/>
+        <image name="6" width="200" height="200"/>
+        <image name="7" width="491.51998901367188" height="491.51998901367188"/>
     </resources>
 </document>
