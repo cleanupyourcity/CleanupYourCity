@@ -15,19 +15,18 @@ class Event {
    // eventLocation
    // [0° N, 0° E]
 
-  //  eventPhotoID
-//    "garbageExampleID"
-   
     
-    var eventSeverityLevel: String?
+    var eventSeverity: String?
     var eventDescription: String?
     var eventPoster: String?
     var eventName: String?
-    
-    init(eventSeverityLevel: String?, eventDescription: String?, eventPoster: String?, eventName: String?){
+    var eventIcon: String?
+
+    init(eventSeverity: String?, eventDescription: String?, eventPoster: String?, eventName: String?, eventIcon: String?){
         self.eventDescription = eventDescription
-        self.eventSeverityLevel = eventSeverityLevel
+        self.eventSeverity = eventSeverity
         self.eventPoster = eventPoster
         self.eventName = eventName
+        self.eventIcon = eventIcon
     }
 }

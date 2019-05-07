@@ -37,22 +37,23 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 
 
     var refEvent: DatabaseReference!
-    var eventList = [Event]()
+    var refRGB: DatabaseReference!
 
+    let userID = Auth.auth().currentUser?.uid;
+
+    var eventList = [Event]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // FirebaseApp.configure()
-
         refEvent = Database.database().reference().child("events");
-        
+
         let camera = GMSCameraPosition.camera(withLatitude: 36.652, longitude: -121.797, zoom: 17)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         gMapView.camera = camera
         
         
         mapView.isMyLocationEnabled = true
-        //self.view = mapView
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -72,15 +73,18 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                         let eventObject = events.value as? [String: AnyObject]
                         let poster  = eventObject?["eventAuthorID"]
                         let description  = eventObject?["eventDescription"]
-                        let severity  = eventObject?["eventSeverityLevel"]
+                        let severity  = eventObject?["eventSeverity"]
                         let name = eventObject?["eventName"]
-
+                        let icon = eventObject?["eventIcon"]
+                        
                         //creating event object with model and fetched values
-                        let event = Event(eventSeverityLevel: severity as! String?,
+                        let event = Event(eventSeverity: severity as! String?,
                                           eventDescription: description as! String?,
                                           eventPoster: poster as! String?,
-                                          eventName: name as! String?)
-
+                                          eventName: name as! String?,
+                                          eventIcon: icon as! String?)
+                        
+                        
                         //appending it to list
                         self.eventList.append(event)
                     }
@@ -97,26 +101,34 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         //creating a cell using the custom class
         let cell = tableView.dequeueReusableCell(withIdentifier: "Event Cell", for: indexPath) as! GarbageTableViewCell
-        
+        cell.backgroundColor = UIColor.orange
         //the artist object
         let event: Event
-        
+        let tempIcon = "8"
         //getting the artist of selected position
         event = eventList[indexPath.row]
         
         //adding values to labels
+
+        cell.eventPic.image = UIImage(named: event.eventIcon ?? tempIcon)
+        cell.eventDescription.text = event.eventDescription
+        cell.eventName.text = event.eventName
         
-              cell.eventDescription.text = event.eventDescription
-        //     cell.eventDangerLevel.text = event.eventDangerLevel
-        //    cell.eventPoster.text = event.eventPoster
-           cell.eventName.text = event.eventName
+        print(event.eventSeverity as Any)
         
+        if(event.eventSeverity == "0"){
+            cell.backgroundColor = UIColor.green
+        }
+        else if(event.eventSeverity == "1"){
+            cell.backgroundColor = UIColor.cyan
+        }
+        else if(event.eventSeverity == "2"){
+            cell.backgroundColor = UIColor.yellow
+        }
+        else if(event.eventSeverity == "3"){
+            cell.backgroundColor = UIColor.red
+        }
         
-        
-      //  cell.eventName.text = "Event Demo"
-       // cell.eventDescription.text = "Event Descprtion for u for me to give you all the love in the world :)"
-        
-        //returning cell
         return cell
     }
     
@@ -125,29 +137,3 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         // Dispose of any resources that can be recreated.
     }
 }
-
-//
-//extension MapViewController: UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Event Cell" , for: indexPath as IndexPath) as? GarbageTableViewCell
-//        cell!.eventName.text = "Event Demo"
-//        cell!.eventDesc.text = "Event Descprtion for u for me to give you all the love in the world :)"
-//        //        cell!.eventPic.image =
-//        return cell!
-//
-//    }
-//
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 4
-//    }
-//
-//
-//}
-//extension MapViewController: UITableViewDelegate{
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let indexPath = tableView.indexPathForSelectedRow
-//        _ = tableView.cellForRow(at: indexPath!)!
-//    }
-//}
