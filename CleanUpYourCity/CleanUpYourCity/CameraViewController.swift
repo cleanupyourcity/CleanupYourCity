@@ -9,26 +9,32 @@
 import UIKit
 import AlamofireImage
 import Firebase
+import FirebaseStorage
+import FirebaseDatabase
+import FirebaseUI
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var ref: DatabaseReference!
-    let userID = Auth.auth().currentUser?.uid
+    let uid = Auth.auth().currentUser?.uid
     
+    @IBOutlet weak var bioTextView: UITextView!
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var onSubmitButton: UIButton!
-
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         self.ref = Database.database().reference()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Register cell classes
-        
-        // Do any additional setup after loading the view.
+        let StorageRef = Storage.storage().reference()
+        let StorageRefChild = StorageRef.child("profileImages/\(String(describing: uid)).jpeg")
+        //let StorageRefChild = StorageRef.child("profileImages/janeDoe.jpeg")
+        let imageView: UIImageView = self.imageView
+        let placeholderImage = UIImage(named: "placeholder.jpg")
+        imageView.sd_setImage(with: StorageRefChild, placeholderImage: placeholderImage)
     }
     
     @IBAction func onCameraSubmitButton(_ sender: Any)
@@ -52,53 +58,76 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         present(picker, animated: true, completion: nil)
     }
     
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af_imageScaled(to: size)
-        
-        imageView.image = scaledImage
+    @objc func handleSelectProfileImageView()
+    {
+        print("Hello there!")
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    {
+        print(info)
+        var selectedImageFromPicker: UIImage?
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage
+        {
+            selectedImageFromPicker = editedImage
+        }
+        else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage
+        {
+            selectedImageFromPicker = originalImage
+        }
+        if let selectedImage = selectedImageFromPicker
+        {
+            imageView.image = selectedImage
+        }
         dismiss(animated: true, completion: nil)
     }
     
-   /*
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-     
-   */
-    
-    
-    
-    
     @IBAction func onSubmitButton(_ sender: Any)
     {
-         // performSegue(withIdentifier: "profileSegue", sender: nil)
-        self.navigationController?.popViewController(animated: true)
-
+    self.navigationController?.popViewController(animated: true)
+        self.uploadImageToFirebaseStorage()
     }
- 
     
     
-    
-    /*
-        @IBAction func onTap(_ sender: Any) {
-            self.performSegue(withIdentifier: "ChangePic", sender: self)
-    
+    func uploadImageToFirebaseStorage()
+    {
+        
+        if let uploadData = UIImageJPEGRepresentation(self.imageView.image!, 0.5)
+        {
+            let StorageRef = Storage.storage().reference()
+            let StorageRefChild = StorageRef.child("profileImages/\(String(describing: uid)).jpeg")
+            StorageRefChild.putData(uploadData, metadata: nil)
+            {
+                (metadata, err) in
+                if let err = err
+                {
+                    print("unable to upload Image into storage due to \(err)")
+                }
+                StorageRefChild.downloadURL(completion:
+                    {
+                        (url, err) in
+                        if let err = err
+                        {
+                            print("Unable to retrieve URL due to error: \(err.localizedDescription)")
+                        }
+                        let profilePicUrl = url?.absoluteString
+                        print("Profile Image successfully uploaded into storage with url: \(profilePicUrl ?? "" )")
+                })
+            }
         }
-    */
+    }
     
+    @IBAction func onDoneButton(_ sender: Any)
+    {
+        let editProfileStoryboard : UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let profilePage = editProfileStoryboard.instantiateViewController(withIdentifier: "profileID")
+    ref.child("profile").child(uid!).setValue(["username":self.usernameTextField.text, "bio":self.bioTextView.text])
+        
+        self.present(profilePage, animated:true, completion:nil)
+    }
     
-    
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    */
-
 }

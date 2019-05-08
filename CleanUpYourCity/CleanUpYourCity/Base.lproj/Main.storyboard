@@ -10,14 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Event-->
-        <scene sceneID="EzK-9i-SpV">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="homeView" storyboardName="Event" id="dYC-Rl-IKj" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3lA-Mh-EB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="830" y="25"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="deS-aI-P5c">
             <objects>
@@ -224,11 +216,11 @@
                                     <constraint firstAttribute="trailing" secondItem="se0-yi-QIZ" secondAttribute="trailing" constant="56" id="F3z-NI-PFK"/>
                                     <constraint firstItem="2HH-Ob-dRA" firstAttribute="leading" secondItem="VuE-Vp-Jcl" secondAttribute="leading" constant="15" id="NW7-Fo-OpV"/>
                                     <constraint firstAttribute="width" secondItem="VuE-Vp-Jcl" secondAttribute="height" multiplier="315:314" id="PtY-fI-oUj"/>
-                                    <constraint firstItem="hUX-kY-H0T" firstAttribute="leading" secondItem="VuE-Vp-Jcl" secondAttribute="leading" constant="127" id="T9N-Q1-qcP"/>
+                                    <constraint firstItem="hUX-kY-H0T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VuE-Vp-Jcl" secondAttribute="leading" symbolic="YES" id="T9N-Q1-qcP"/>
                                     <constraint firstAttribute="trailing" secondItem="hUX-kY-H0T" secondAttribute="trailing" constant="126" id="UyU-47-dXj"/>
                                     <constraint firstItem="Ppf-MV-Vcv" firstAttribute="leading" secondItem="VuE-Vp-Jcl" secondAttribute="leading" constant="15" id="W9O-nX-pEU"/>
                                     <constraint firstItem="ydV-tn-dEf" firstAttribute="top" secondItem="Ppf-MV-Vcv" secondAttribute="bottom" constant="25" id="atI-G7-YOg"/>
-                                    <constraint firstItem="se0-yi-QIZ" firstAttribute="leading" secondItem="VuE-Vp-Jcl" secondAttribute="leading" constant="56" id="cqY-T0-94e"/>
+                                    <constraint firstItem="se0-yi-QIZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VuE-Vp-Jcl" secondAttribute="leading" symbolic="YES" id="cqY-T0-94e"/>
                                     <constraint firstAttribute="trailing" secondItem="Ppf-MV-Vcv" secondAttribute="trailing" constant="15" id="e9T-bV-rF7"/>
                                     <constraint firstItem="Ppf-MV-Vcv" firstAttribute="top" secondItem="apL-o5-Kgs" secondAttribute="bottom" constant="25" id="g40-6s-gSU"/>
                                     <constraint firstItem="ydV-tn-dEf" firstAttribute="leading" secondItem="VuE-Vp-Jcl" secondAttribute="leading" constant="15" id="ggZ-7d-4f5"/>
@@ -275,6 +267,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hew-1v-kko" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="223" y="395"/>
+        </scene>
+        <!--Event-->
+        <scene sceneID="wsa-De-f0m">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="homeView" storyboardName="Event" id="kJ5-tP-OCC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1iq-b7-RJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="25"/>
         </scene>
     </scenes>
     <resources>

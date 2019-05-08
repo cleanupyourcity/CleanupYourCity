@@ -13,7 +13,7 @@
         <!--Edit Profile-->
         <scene sceneID="6J3-PW-Yg2">
             <objects>
-                <viewController storyboardIdentifier="EditID" id="tlO-8t-2dL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditID" id="tlO-8t-2dL" customClass="CameraViewController" customModule="CleanUpYourCity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ax-FI-khy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,10 +26,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2az-TJ-LOP">
-                                <rect key="frame" x="16" y="254" width="343" height="397"/>
+                                <rect key="frame" x="16" y="259" width="343" height="392"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aZU-fZ-4bm">
-                                        <rect key="frame" x="8" y="8" width="327" height="381"/>
+                                        <rect key="frame" x="8" y="8" width="327" height="374"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="143" id="74r-CJ-O0S">
@@ -107,16 +107,18 @@
                                     <constraint firstItem="aZU-fZ-4bm" firstAttribute="top" secondItem="2az-TJ-LOP" secondAttribute="top" constant="8" id="7Vi-y4-fTk"/>
                                     <constraint firstAttribute="trailing" secondItem="aZU-fZ-4bm" secondAttribute="trailing" constant="8" id="WUK-4M-yfp"/>
                                     <constraint firstItem="aZU-fZ-4bm" firstAttribute="leading" secondItem="2az-TJ-LOP" secondAttribute="leading" constant="8" id="ZjY-CU-uUb"/>
-                                    <constraint firstAttribute="bottom" secondItem="aZU-fZ-4bm" secondAttribute="bottom" constant="8" id="dnh-KX-fKm"/>
-                                    <constraint firstAttribute="bottom" secondItem="aZU-fZ-4bm" secondAttribute="bottom" constant="8" id="khG-1v-F1H"/>
+                                    <constraint firstAttribute="bottom" secondItem="aZU-fZ-4bm" secondAttribute="bottom" constant="10" id="dnh-KX-fKm"/>
+                                    <constraint firstAttribute="bottom" secondItem="aZU-fZ-4bm" secondAttribute="bottom" constant="10" id="khG-1v-F1H"/>
                                     <constraint firstAttribute="trailing" secondItem="aZU-fZ-4bm" secondAttribute="trailing" constant="8" id="nsW-z9-ozU"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk3-hD-sfX">
-                                <rect key="frame" x="20" y="94" width="125" height="130"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk3-hD-sfX">
+                                <rect key="frame" x="16" y="94" width="134" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Click to Edit">
                                     <color key="titleColor" red="0.94328997459999997" green="0.14258163139999999" blue="0.053208791210000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="jvr-EJ-VmW" kind="show" id="C0S-ON-P2p"/>
@@ -155,21 +157,41 @@
                             <constraint firstItem="Msg-EX-6Nw" firstAttribute="leading" secondItem="mep-3Y-ijm" secondAttribute="leading" constant="20" id="H8E-Ju-2mX"/>
                             <constraint firstItem="a1a-86-oKU" firstAttribute="top" secondItem="mep-3Y-ijm" secondAttribute="top" constant="30" id="KIW-Wt-Yy1"/>
                             <constraint firstItem="a1a-86-oKU" firstAttribute="leading" secondItem="Msg-EX-6Nw" secondAttribute="trailing" constant="30" id="LgH-qu-txu"/>
-                            <constraint firstItem="2az-TJ-LOP" firstAttribute="top" secondItem="vfQ-qw-kZC" secondAttribute="bottom" constant="30" id="QyN-WV-BnY"/>
+                            <constraint firstItem="2az-TJ-LOP" firstAttribute="top" secondItem="vfQ-qw-kZC" secondAttribute="bottom" constant="35" id="QyN-WV-BnY"/>
                             <constraint firstItem="2az-TJ-LOP" firstAttribute="leading" secondItem="mep-3Y-ijm" secondAttribute="leading" constant="16" id="Sf6-XI-5hT"/>
                             <constraint firstItem="mep-3Y-ijm" firstAttribute="trailing" secondItem="a1a-86-oKU" secondAttribute="trailing" constant="20" id="Sga-iO-Gw1"/>
                             <constraint firstItem="mep-3Y-ijm" firstAttribute="bottom" secondItem="2az-TJ-LOP" secondAttribute="bottom" constant="16" id="Z1P-jz-lbK"/>
-                            <constraint firstItem="2az-TJ-LOP" firstAttribute="top" secondItem="Msg-EX-6Nw" secondAttribute="bottom" constant="30" id="dgt-sB-hsE"/>
+                            <constraint firstItem="2az-TJ-LOP" firstAttribute="top" secondItem="Msg-EX-6Nw" secondAttribute="bottom" constant="35" id="dgt-sB-hsE"/>
                             <constraint firstItem="vfQ-qw-kZC" firstAttribute="top" secondItem="a1a-86-oKU" secondAttribute="bottom" constant="2" id="oac-vi-ytH"/>
                             <constraint firstItem="vfQ-qw-kZC" firstAttribute="leading" secondItem="Msg-EX-6Nw" secondAttribute="trailing" constant="30" id="u5M-CY-pSr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mep-3Y-ijm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Profile" id="NdP-FV-Frz"/>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="NdP-FV-Frz">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="62G-TL-Var">
+                            <connections>
+                                <action selector="onDoneButton:" destination="tlO-8t-2dL" id="Pl0-Uc-Ux7"/>
+                                <segue destination="NJQ-Md-nC4" kind="show" id="ou8-qq-uga"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bioTextView" destination="iDu-3o-YCd" id="Zo0-HZ-sny"/>
+                        <outlet property="imageView" destination="Msg-EX-6Nw" id="Xp4-FT-YMZ"/>
+                        <outlet property="usernameTextField" destination="a1a-86-oKU" id="tIX-Zd-cLY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmT-ql-PTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="975.20000000000005" y="-16.641679160419791"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="pZH-ra-RPM">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="profileView" storyboardName="Profile" id="NJQ-Md-nC4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIB-G9-3Tk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="591"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="9tM-dB-KlR">

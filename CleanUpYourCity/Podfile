@@ -12,6 +12,7 @@ target 'CleanUpYourCity' do
   pod 'Firebase/Database'
   pod 'GoogleMaps'
   pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
 
   target 'CleanUpYourCityTests' do
     inherit! :search_paths
