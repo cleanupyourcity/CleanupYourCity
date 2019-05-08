@@ -16,6 +16,9 @@ class AddEventViewController: UIViewController {
     
     let userID = Auth.auth().currentUser?.uid;
     
+    @IBOutlet weak var severityLevelField: UISegmentedControl!
+    
+    
     @IBOutlet weak var eventNameField: UITextField!
     
     @IBOutlet weak var eventDescriptionField: UITextView!
@@ -25,9 +28,32 @@ class AddEventViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         ref = Database.database().reference()
-        
+        self.view.backgroundColor = UIColor.green
+       
     }
 
+    @IBAction func differentSeverityBackgrounds(_ sender: Any) {
+        let eventSeverityInteger: Int = severityLevelField.selectedSegmentIndex
+        
+        let eventSeverityLevel = String(eventSeverityInteger)
+        
+        if(eventSeverityLevel == "0")
+        {
+            self.view.backgroundColor = UIColor.green
+        }
+        else if (eventSeverityLevel == "1")
+        {
+            self.view.backgroundColor = UIColor.cyan
+        }
+        else if (eventSeverityLevel == "2")
+        {
+            self.view.backgroundColor = UIColor.yellow
+        }
+        else if (eventSeverityLevel == "3")
+        {
+            self.view.backgroundColor = UIColor.red
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,11 +64,15 @@ class AddEventViewController: UIViewController {
         //Post event data to firebase
         let key = ref?.childByAutoId().key
         
-        //creating artist with the given values
+        let eventSeverityInteger: Int = severityLevelField.selectedSegmentIndex
+        
+        let eventSeverityLevel = String(eventSeverityInteger)
+        
         let event = ["eventAuthorID":userID,
                       "eventName": eventNameField.text! as String,
-                      "eventDescription": eventDescriptionField.text! as String
-        ]
+                      "eventDescription": eventDescriptionField.text! as String,
+                      "eventSeverity": eventSeverityLevel
+            ]
         ref?.child("events").child(key!).setValue(event)
         self.navigationController?.popViewController(animated: true)    }
     
