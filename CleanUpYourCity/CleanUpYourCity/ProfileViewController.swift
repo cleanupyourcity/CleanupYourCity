@@ -43,7 +43,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         var count = 0;
         ref.child("profile").child(userID!).child("history").observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            count = (value?.count)!
+//            count += (value?.count)!
         };
         print(count)
         return 1;
