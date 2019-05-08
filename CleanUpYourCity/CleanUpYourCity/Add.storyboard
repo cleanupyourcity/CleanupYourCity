@@ -30,6 +30,10 @@
                                     <segment title="High"/>
                                     <segment title="Extreme"/>
                                 </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="severityLevelChanged:" destination="ZTT-ER-f5a" eventType="valueChanged" id="sxP-Wo-Jn6"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danger Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aol-Qs-LHv">
                                 <rect key="frame" x="137" y="137" width="100" height="21"/>
@@ -263,6 +267,7 @@
                     <connections>
                         <outlet property="eventDescriptionField" destination="Opk-Ky-SCC" id="LPw-7P-8Zc"/>
                         <outlet property="eventNameField" destination="FJi-kd-IFk" id="kc4-aE-oMY"/>
+                        <outlet property="eventSeverityController" destination="HHT-GP-144" id="o9m-Jf-HbC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyL-kq-xYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -273,11 +278,11 @@
     <resources>
         <image name="0" width="200" height="200"/>
         <image name="1" width="200" height="200"/>
-        <image name="2" width="24.824241638183594" height="24.824241638183594"/>
+        <image name="2" width="512" height="512"/>
         <image name="3" width="600" height="600"/>
-        <image name="4" width="491.51998901367188" height="491.51998901367188"/>
+        <image name="4" width="512" height="512"/>
         <image name="5" width="512" height="512"/>
         <image name="6" width="200" height="200"/>
-        <image name="7" width="491.51998901367188" height="491.51998901367188"/>
+        <image name="7" width="512" height="512"/>
     </resources>
 </document>
