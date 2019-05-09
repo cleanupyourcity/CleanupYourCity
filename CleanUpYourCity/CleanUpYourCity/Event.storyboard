@@ -38,7 +38,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biohazardIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uoT-rs-WIO">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="uoT-rs-WIO">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="64" id="5hI-k5-S66"/>
@@ -156,6 +156,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="biohazardIcon" width="491.51998901367188" height="491.51998901367188"/>
+        <image name="1" width="200" height="200"/>
     </resources>
 </document>
