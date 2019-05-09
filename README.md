@@ -35,10 +35,10 @@ still decide to withdraw their decision.
 **Required Stories**
 
 * [X] User can register and login
-* [] User can view garbage in their area
-* [] User can add location to clean
-* [] User can view profile info
-* [] User can edit photo/profile
+* [X] User can view garbage in their area
+* [X] User can add location to clean
+* [X] User can view profile info
+* [X] User can edit photo/profile
 * [] User can adopt garbage
 
 
