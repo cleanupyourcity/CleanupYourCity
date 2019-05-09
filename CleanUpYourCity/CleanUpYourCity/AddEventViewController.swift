@@ -22,13 +22,38 @@ class AddEventViewController: UIViewController {
     
     @IBOutlet weak var eventSeverityController: UISegmentedControl!
     
+    //icon buttons
+    @IBOutlet weak var genericButton: UIButton!
+    @IBOutlet weak var recyclingButton: UIButton!
+    @IBOutlet weak var greenWasteButton: UIButton!
+    @IBOutlet weak var eWasteButton: UIButton!
+    @IBOutlet weak var refuseButton: UIButton!
+    @IBOutlet weak var needleButton: UIButton!
+    @IBOutlet weak var toxicWasteButton: UIButton!
+    @IBOutlet weak var biohazardButton: UIButton!
+    
+    
+    var iconNumber:String = "0"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         ref = Database.database().reference()
         
-        self.view.backgroundColor = UIColor.green    }
+        self.view.backgroundColor = UIColor.green
+       
+        genericButton.tag = 0
+        recyclingButton.tag = 1
+        greenWasteButton.tag = 2
+        eWasteButton.tag = 3
+        refuseButton.tag = 4
+        needleButton.tag = 5
+        toxicWasteButton.tag = 6
+        biohazardButton.tag = 7
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,6 +85,83 @@ class AddEventViewController: UIViewController {
         }
     }
     
+    func changeButtonBackground()
+    {
+        for case let button as UIButton in self.view.subviews {
+            if button.backgroundColor == UIColor.clear
+            {
+                
+            }
+            else if button.backgroundColor == UIColor.lightGray
+            {
+                button.backgroundColor = UIColor.white
+            }
+        
+        }
+        
+    }
+
+    
+    @IBAction func changeEventIcon(_ sender: UIButton){
+        if(sender.tag == 0)
+        {
+            changeButtonBackground()
+            sender.backgroundColor = UIColor.lightGray
+            iconNumber = "0"
+            print(iconNumber)
+        }
+        else if(sender.tag == 1)
+        {
+            changeButtonBackground()
+            sender.backgroundColor = UIColor.lightGray
+            iconNumber = "1"
+            print(iconNumber)
+        }
+        else if(sender.tag == 2)
+        {
+            changeButtonBackground()
+            sender.backgroundColor = UIColor.lightGray
+            iconNumber = "2"
+            print(iconNumber)
+        }
+        else if(sender.tag == 3)
+        {
+            changeButtonBackground()
+            sender.backgroundColor = UIColor.lightGray
+            iconNumber = "3"
+            print(iconNumber)
+        }
+        else if(sender.tag == 4)
+        {
+            changeButtonBackground()
+            sender.backgroundColor = UIColor.lightGray
+            iconNumber = "4"
+            print(iconNumber)
+        }
+        else if(sender.tag == 5)
+        {
+            changeButtonBackground()
+            sender.backgroundColor = UIColor.lightGray
+            iconNumber = "5"
+            print(iconNumber)
+        }
+        else if(sender.tag == 6)
+        {
+            changeButtonBackground()
+            sender.backgroundColor = UIColor.lightGray
+            iconNumber = "6"
+            print(iconNumber)
+        }
+        else if(sender.tag == 7)
+        {
+            changeButtonBackground()
+            sender.backgroundColor = UIColor.lightGray
+            iconNumber = "7"
+            print(iconNumber)
+        }
+    }
+    
+    
     @IBAction func addEvent(_ sender: Any) {
         
         //Post event data to firebase
@@ -73,7 +175,8 @@ class AddEventViewController: UIViewController {
         let event = ["eventAuthorID":userID,
                       "eventName": eventNameField.text! as String,
                       "eventDescription": eventDescriptionField.text! as String,
-                      "eventSeverity": eventSeverityLevel
+                      "eventSeverity": eventSeverityLevel,
+                      "eventIcon": iconNumber
         ]
         ref?.child("events").child(key!).setValue(event)
         ref?.child("profile").child(userID!).child("history").child(key!).setValue(event)

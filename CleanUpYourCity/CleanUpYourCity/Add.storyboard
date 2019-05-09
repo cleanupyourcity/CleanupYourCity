@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZTT-ER-f5a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZTT-ER-f5a">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,6 +106,9 @@
                                     <constraint firstAttribute="width" constant="40" id="SXN-4q-Cnp"/>
                                 </constraints>
                                 <state key="normal" title="GenericButton" image="0"/>
+                                <connections>
+                                    <action selector="changeEventIcon:" destination="ZTT-ER-f5a" eventType="touchUpInside" id="Vva-AQ-4oo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23u-Lj-9dM">
                                 <rect key="frame" x="297" y="262" width="40" height="40"/>
@@ -115,6 +118,9 @@
                                     <constraint firstAttribute="height" constant="40" id="noY-2N-bBq"/>
                                 </constraints>
                                 <state key="normal" title="Recylcling Button" image="1"/>
+                                <connections>
+                                    <action selector="changeEventIcon:" destination="ZTT-ER-f5a" eventType="touchUpInside" id="pck-4R-4Rw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4c-fW-Pnx">
                                 <rect key="frame" x="249" y="307" width="40" height="40"/>
@@ -124,6 +130,9 @@
                                     <constraint firstAttribute="height" constant="40" id="O84-fe-9Ox"/>
                                 </constraints>
                                 <state key="normal" title="GreenwasteButton" image="2"/>
+                                <connections>
+                                    <action selector="changeEventIcon:" destination="ZTT-ER-f5a" eventType="touchUpInside" id="ld3-NC-0kb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGt-gS-0H8">
                                 <rect key="frame" x="297" y="307" width="40" height="40"/>
@@ -133,6 +142,9 @@
                                     <constraint firstAttribute="width" constant="40" id="Wag-uq-NpH"/>
                                 </constraints>
                                 <state key="normal" title="EwasteButton" image="3"/>
+                                <connections>
+                                    <action selector="changeEventIcon:" destination="ZTT-ER-f5a" eventType="touchUpInside" id="rV2-OF-R66"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knh-HX-odr">
                                 <rect key="frame" x="249" y="352" width="40" height="40"/>
@@ -142,6 +154,9 @@
                                     <constraint firstAttribute="width" constant="40" id="Aah-Bm-KUm"/>
                                 </constraints>
                                 <state key="normal" title="RefuseButton" image="4"/>
+                                <connections>
+                                    <action selector="changeEventIcon:" destination="ZTT-ER-f5a" eventType="touchUpInside" id="KnR-gi-ft9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug7-Ia-aRa">
                                 <rect key="frame" x="297" y="352" width="40" height="40"/>
@@ -151,6 +166,9 @@
                                     <constraint firstAttribute="height" constant="40" id="JvE-iN-58b"/>
                                 </constraints>
                                 <state key="normal" title="NeedleButton" image="5"/>
+                                <connections>
+                                    <action selector="changeEventIcon:" destination="ZTT-ER-f5a" eventType="touchUpInside" id="zIt-YT-b4r"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3V-eI-La7">
                                 <rect key="frame" x="297" y="397" width="40" height="40"/>
@@ -160,6 +178,9 @@
                                     <constraint firstAttribute="height" constant="40" id="KP7-1W-0c7"/>
                                 </constraints>
                                 <state key="normal" title="BiohazardButton" image="7"/>
+                                <connections>
+                                    <action selector="changeEventIcon:" destination="ZTT-ER-f5a" eventType="touchUpInside" id="iUs-ZN-P1h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5k-cu-yhe">
                                 <rect key="frame" x="249" y="397" width="40" height="40"/>
@@ -169,9 +190,13 @@
                                     <constraint firstAttribute="height" constant="40" id="pJn-8U-vGK"/>
                                 </constraints>
                                 <state key="normal" title="ToxicwasteButton" image="6"/>
+                                <connections>
+                                    <action selector="changeEventIcon:" destination="ZTT-ER-f5a" eventType="touchUpInside" id="LNO-dN-rDD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuM-bE-H7X">
                                 <rect key="frame" x="69" y="605" width="68" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Save Post"/>
                                 <connections>
                                     <action selector="addEvent:" destination="ZTT-ER-f5a" eventType="touchUpInside" id="RsE-CK-9Ck"/>
@@ -179,6 +204,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPF-Rm-Gis">
                                 <rect key="frame" x="241" y="605" width="79" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Delete Post"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Garbage Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D8-C1-B8h">
@@ -265,9 +291,17 @@
                         <viewLayoutGuide key="safeArea" id="533-2L-3ec"/>
                     </view>
                     <connections>
+                        <outlet property="biohazardButton" destination="u3V-eI-La7" id="eX8-s8-k8D"/>
+                        <outlet property="eWasteButton" destination="YGt-gS-0H8" id="qLk-oX-cS2"/>
                         <outlet property="eventDescriptionField" destination="Opk-Ky-SCC" id="LPw-7P-8Zc"/>
                         <outlet property="eventNameField" destination="FJi-kd-IFk" id="kc4-aE-oMY"/>
                         <outlet property="eventSeverityController" destination="HHT-GP-144" id="o9m-Jf-HbC"/>
+                        <outlet property="genericButton" destination="bHv-3i-0pO" id="EBN-FW-Oc1"/>
+                        <outlet property="greenWasteButton" destination="Q4c-fW-Pnx" id="GDx-aB-G0U"/>
+                        <outlet property="needleButton" destination="ug7-Ia-aRa" id="Q2f-iV-TBK"/>
+                        <outlet property="recyclingButton" destination="23u-Lj-9dM" id="EpF-yB-OWk"/>
+                        <outlet property="refuseButton" destination="Knh-HX-odr" id="6J7-0W-J1e"/>
+                        <outlet property="toxicWasteButton" destination="C5k-cu-yhe" id="nQJ-AD-zbb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyL-kq-xYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
