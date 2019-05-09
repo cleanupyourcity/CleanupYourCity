@@ -171,7 +171,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="62G-TL-Var">
                             <connections>
                                 <action selector="onDoneButton:" destination="tlO-8t-2dL" id="Pl0-Uc-Ux7"/>
-                                <segue destination="NJQ-Md-nC4" kind="show" id="ou8-qq-uga"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

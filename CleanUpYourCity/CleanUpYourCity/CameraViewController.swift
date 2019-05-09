@@ -32,6 +32,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let StorageRef = Storage.storage().reference()
         let StorageRefChild = StorageRef.child("profileImages/\(String(describing: uid)).jpeg")
         //let StorageRefChild = StorageRef.child("profileImages/janeDoe.jpeg")
+        
+        
+        // I think something here is wrong...
+        
+        
+        
         let imageView: UIImageView = self.imageView
         let placeholderImage = UIImage(named: "placeholder.jpg")
         imageView.sd_setImage(with: StorageRefChild, placeholderImage: placeholderImage)
@@ -49,7 +55,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         {
             picker.sourceType = .camera
             // try with both
-            picker.sourceType = .photoLibrary
+            //picker.sourceType = .photoLibrary
         }
         else
         {
@@ -60,7 +66,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @objc func handleSelectProfileImageView()
     {
-        print("Hello there!")
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
@@ -69,8 +74,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
-        print(info)
         var selectedImageFromPicker: UIImage?
+        
         if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage
         {
             selectedImageFromPicker = editedImage
@@ -88,14 +93,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func onSubmitButton(_ sender: Any)
     {
-    self.navigationController?.popViewController(animated: true)
         self.uploadImageToFirebaseStorage()
+        self.navigationController?.popViewController(animated: true)
     }
-    
     
     func uploadImageToFirebaseStorage()
     {
-        
         if let uploadData = UIImageJPEGRepresentation(self.imageView.image!, 0.5)
         {
             let StorageRef = Storage.storage().reference()
@@ -123,11 +126,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func onDoneButton(_ sender: Any)
     {
-        let editProfileStoryboard : UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        let profilePage = editProfileStoryboard.instantiateViewController(withIdentifier: "profileID")
-    ref.child("profile").child(uid!).setValue(["username":self.usernameTextField.text, "bio":self.bioTextView.text])
-        
-        self.present(profilePage, animated:true, completion:nil)
+        self.uploadProfileToFirebaseStorage()
+        self.navigationController?.popViewController(animated: true)
     }
     
+    func uploadProfileToFirebaseStorage()
+    {
+    ref.child("profile").child(uid!).setValue(["username":self.usernameTextField.text, "bio":self.bioTextView.text])
+
+    }
 }
