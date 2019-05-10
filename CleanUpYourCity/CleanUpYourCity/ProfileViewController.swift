@@ -8,6 +8,10 @@
 
 import UIKit
 import Firebase
+import AlamofireImage
+import FirebaseStorage
+import FirebaseDatabase
+import FirebaseUI
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -26,6 +30,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let StorageRef = Storage.storage().reference()
+        let StorageRefChild = StorageRef.child("profileImages/\(String(describing: userID)).jpeg")
+        
+        let imageView: UIImageView = self.profileImage
+        
+        let placeholderImage = UIImage(named: "placeholder.jpg")
+        
+        imageView.sd_setImage(with: StorageRefChild, placeholderImage: placeholderImage)
         
         self.ref = Database.database().reference();
         ref.child("profile").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
@@ -43,7 +55,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         var count = 0;
         ref.child("profile").child(userID!).child("history").observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
-//            count += (value?.count)!
+            if(value != nil)
+            {
+                count = (value?.count)!
+            }
         };
         print(count)
         return 1;

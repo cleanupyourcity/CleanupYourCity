@@ -382,7 +382,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -403,7 +403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6A3E940C960D8E9C4BABDA4A /* [CP] Check Pods Manifest.lock */ = {
@@ -448,7 +448,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -457,7 +457,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
