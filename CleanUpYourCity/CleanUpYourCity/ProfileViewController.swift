@@ -34,6 +34,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.bioLabel.text = value?["bio"] as? String ?? ""
         };
         
+        let storageRef = Storage.storage().reference().child("profileImages/\(String(describing: userID)).jpeg")
+        let placeholderImage = UIImage(named: "image_placeholder")
+        
+        self.profileImage.sd_setImage(with: storageRef, placeholderImage: placeholderImage)
+        
         
         historyTableView.delegate = self;
         historyTableView.dataSource = self;
@@ -43,7 +48,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         var count = 0;
         ref.child("profile").child(userID!).child("history").observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
-//            count += (value?.count)!
+            if(value?.count != nil) {
+                count += (value?.count)!
+            }
         };
         print(count)
         return 1;
@@ -58,7 +65,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.nameLabel.text = value?["name"] as? String ?? ""
             cell.dateLabel.text = value?["date"] as? String ?? ""
             cell.severityLabel.text = value?["severity"] as? String ?? ""
-            cell.pointsLabel.text = value?["points"] as? String ?? ""
         };
         return cell;
     }

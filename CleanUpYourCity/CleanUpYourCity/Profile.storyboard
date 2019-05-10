@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LJA-kx-GWH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LJA-kx-GWH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,12 +63,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points Earned: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpG-Ty-Zah">
-                                                    <rect key="frame" x="103.5" y="82.5" width="128" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/21/19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS0-Bz-O5a">
                                                     <rect key="frame" x="270" y="5" width="60" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -80,21 +73,18 @@
                                             <constraints>
                                                 <constraint firstItem="7ix-IE-Ws4" firstAttribute="centerY" secondItem="zqo-2j-pjW" secondAttribute="centerY" id="7Nf-YM-Fdn"/>
                                                 <constraint firstItem="7ix-IE-Ws4" firstAttribute="centerX" secondItem="zqo-2j-pjW" secondAttribute="centerX" id="AV4-BP-nCx"/>
-                                                <constraint firstItem="rpG-Ty-Zah" firstAttribute="top" secondItem="7ix-IE-Ws4" secondAttribute="bottom" constant="10" id="Ann-PG-orT"/>
                                                 <constraint firstItem="7ix-IE-Ws4" firstAttribute="centerX" secondItem="zqo-2j-pjW" secondAttribute="centerX" id="N09-aw-Z9x"/>
                                                 <constraint firstAttribute="trailing" secondItem="pS0-Bz-O5a" secondAttribute="trailing" constant="5" id="fn6-2w-z3c"/>
                                                 <constraint firstItem="mA5-1c-sWd" firstAttribute="leading" secondItem="zqo-2j-pjW" secondAttribute="leading" constant="5" id="iWr-fb-AEs"/>
                                                 <constraint firstItem="mA5-1c-sWd" firstAttribute="top" secondItem="zqo-2j-pjW" secondAttribute="top" constant="5" id="iYq-Ba-RuV"/>
                                                 <constraint firstItem="pS0-Bz-O5a" firstAttribute="top" secondItem="zqo-2j-pjW" secondAttribute="top" constant="5" id="k4x-v2-KxC"/>
                                                 <constraint firstItem="7ix-IE-Ws4" firstAttribute="centerY" secondItem="zqo-2j-pjW" secondAttribute="centerY" id="ucV-UW-Le1"/>
-                                                <constraint firstItem="rpG-Ty-Zah" firstAttribute="centerX" secondItem="zqo-2j-pjW" secondAttribute="centerX" id="wrH-2h-6nY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="pS0-Bz-O5a" id="cBk-56-Q7k"/>
                                             <outlet property="nameLabel" destination="mA5-1c-sWd" id="I4B-X0-ZjP"/>
-                                            <outlet property="pointsLabel" destination="rpG-Ty-Zah" id="qb8-4y-TXK"/>
                                             <outlet property="severityLabel" destination="7ix-IE-Ws4" id="aDQ-rQ-5hb"/>
                                         </connections>
                                     </tableViewCell>
