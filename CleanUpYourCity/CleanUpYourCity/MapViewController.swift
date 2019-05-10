@@ -60,9 +60,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         tableView.reloadData()
         // Do any additional setup after loading the view.
-        
-//        eventList.removeAll()
-        
+            
         refEvent.observe(DataEventType.value, with: { (snapshot) in
 
                 //if the reference have some values
@@ -116,6 +114,8 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.eventDescription.text = event.eventDescription
         cell.eventName.text = event.eventName
         
+        print(event.eventSeverity as Any)
+        
         if(event.eventSeverity == "0"){
             cell.backgroundColor = UIColor.green
         }
@@ -127,9 +127,6 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
         else if(event.eventSeverity == "3"){
             cell.backgroundColor = UIColor.red
-        }
-        else {
-            cell.backgroundColor = UIColor.orange
         }
         
         return cell

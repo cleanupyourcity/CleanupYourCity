@@ -8,6 +8,10 @@
 
 import UIKit
 import Firebase
+import AlamofireImage
+import FirebaseStorage
+import FirebaseDatabase
+import FirebaseUI
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -26,6 +30,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let StorageRef = Storage.storage().reference()
+        let StorageRefChild = StorageRef.child("profileImages/\(String(describing: userID)).jpeg")
+        
+        let imageView: UIImageView = self.profileImage
+        
+        let placeholderImage = UIImage(named: "placeholder.jpg")
+        
+        imageView.sd_setImage(with: StorageRefChild, placeholderImage: placeholderImage)
         
         self.ref = Database.database().reference();
         ref.child("profile").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
@@ -33,11 +45,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.userLabel.text = value?["username"] as? String ?? ""
             self.bioLabel.text = value?["bio"] as? String ?? ""
         };
-        
-        let storageRef = Storage.storage().reference().child("profileImages/\(String(describing: userID)).jpeg")
-        let placeholderImage = UIImage(named: "image_placeholder")
-        
-        self.profileImage.sd_setImage(with: storageRef, placeholderImage: placeholderImage)
         
         
         historyTableView.delegate = self;
@@ -48,8 +55,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         var count = 0;
         ref.child("profile").child(userID!).child("history").observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            if(value?.count != nil) {
-                count += (value?.count)!
+            if(value != nil)
+            {
+                count = (value?.count)!
             }
         };
         print(count)
@@ -65,6 +73,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.nameLabel.text = value?["name"] as? String ?? ""
             cell.dateLabel.text = value?["date"] as? String ?? ""
             cell.severityLabel.text = value?["severity"] as? String ?? ""
+            cell.pointsLabel.text = value?["points"] as? String ?? ""
         };
         return cell;
     }
