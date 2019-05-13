@@ -22,7 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         GMSServices.provideAPIKey("AIzaSyAysQBTOIQslM_tkkA_32mutRNN6LO-1WI")
-
+        if (Auth.auth().currentUser != nil)
+        {
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let homeView = main.instantiateViewController(withIdentifier: "homeView")
+            window?.rootViewController = homeView
+        }
         return true
         
     }

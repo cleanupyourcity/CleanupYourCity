@@ -123,7 +123,13 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func onLogoutButton(_ sender: Any) {
+        try! Auth.auth().signOut()
+        
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let homeView = main.instantiateViewController(withIdentifier: "loginView")
+        self.present(homeView, animated: false, completion: nil);
+    }
 
     /*
     // MARK: - Navigation
