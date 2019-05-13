@@ -18,10 +18,10 @@
 		85CEEB56224C2A0000CAC35B /* CleanUpYourCityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEEB55224C2A0000CAC35B /* CleanUpYourCityTests.swift */; };
 		85CEEB61224C2A0000CAC35B /* CleanUpYourCityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEEB60224C2A0000CAC35B /* CleanUpYourCityUITests.swift */; };
 		873F2622500715B22D0B5502 /* Pods_CleanUpYourCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E4E0C346B3E8A71094074E /* Pods_CleanUpYourCity.framework */; };
-		A30CF146225E98D300678871 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30CF145225E98D300678871 /* Profile.storyboard */; };
 		A33EECE7225E9154009E810C /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECE6225E9154009E810C /* Event.storyboard */; };
 		A33EECEB225E91A4009E810C /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEA225E91A4009E810C /* Add.storyboard */; };
 		A33EECED225E91B4009E810C /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33EECEC225E91B4009E810C /* EditProfile.storyboard */; };
+		A399399C22890FBC0051E655 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A399399B22890FBC0051E655 /* Profile.storyboard */; };
 		A3FA27CE2277AB58006B82F1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA27CD2277AB58006B82F1 /* ProfileViewController.swift */; };
 		A3FA27D02277AE69006B82F1 /* historyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA27CF2277AE69006B82F1 /* historyCell.swift */; };
 		A96BFD5722778CDF0054C413 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BFD5522778CDF0054C413 /* MapViewController.swift */; };
@@ -71,10 +71,10 @@
 		85CEEB60224C2A0000CAC35B /* CleanUpYourCityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanUpYourCityUITests.swift; sourceTree = "<group>"; };
 		85CEEB62224C2A0000CAC35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90E4E0C346B3E8A71094074E /* Pods_CleanUpYourCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanUpYourCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A30CF145225E98D300678871 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		A33EECE6225E9154009E810C /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		A33EECEA225E91A4009E810C /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
 		A33EECEC225E91B4009E810C /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
+		A399399B22890FBC0051E655 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../../../Downloads/currentProject/CleanupYourCity/CleanUpYourCity/CleanUpYourCity/Profile.storyboard; sourceTree = "<group>"; };
 		A3FA27CD2277AB58006B82F1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A3FA27CF2277AE69006B82F1 /* historyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyCell.swift; sourceTree = "<group>"; };
 		A96BFD5522778CDF0054C413 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 				85CEEB49224C2A0000CAC35B /* LaunchScreen.storyboard */,
 				85CEEB4C224C2A0000CAC35B /* Info.plist */,
 				A33EECEA225E91A4009E810C /* Add.storyboard */,
+				A399399B22890FBC0051E655 /* Profile.storyboard */,
 				A33EECEC225E91B4009E810C /* EditProfile.storyboard */,
-				A30CF145225E98D300678871 /* Profile.storyboard */,
 				A3FA27CD2277AB58006B82F1 /* ProfileViewController.swift */,
 				A3FA27CF2277AE69006B82F1 /* historyCell.swift */,
 				BCF912B2226529F400D2B83C /* GoogleService-Info.plist */,
@@ -332,11 +332,11 @@
 			files = (
 				85CEEB4B224C2A0000CAC35B /* LaunchScreen.storyboard in Resources */,
 				BCF912B3226529F400D2B83C /* GoogleService-Info.plist in Resources */,
+				A399399C22890FBC0051E655 /* Profile.storyboard in Resources */,
 				A33EECED225E91B4009E810C /* EditProfile.storyboard in Resources */,
 				A33EECE7225E9154009E810C /* Event.storyboard in Resources */,
 				85CEEB48224C2A0000CAC35B /* Assets.xcassets in Resources */,
 				A33EECEB225E91A4009E810C /* Add.storyboard in Resources */,
-				A30CF146225E98D300678871 /* Profile.storyboard in Resources */,
 				85CEEB46224C2A0000CAC35B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,7 +382,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -403,7 +403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6A3E940C960D8E9C4BABDA4A /* [CP] Check Pods Manifest.lock */ = {
@@ -448,7 +448,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -457,7 +457,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanUpYourCity/Pods-CleanUpYourCity-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

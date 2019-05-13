@@ -12,10 +12,6 @@ import AlamofireImage
 import FirebaseStorage
 import FirebaseDatabase
 import FirebaseUI
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -112,14 +108,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         else if(event.eventSeverity == "3"){
             cell.backgroundColor = UIColor.red
         }
-        
-        ref.child("profile").child(userID!).child("history").child("eventID").observeSingleEvent(of: .value) { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            cell.nameLabel.text = value?["name"] as? String ?? ""
-            cell.dateLabel.text = value?["date"] as? String ?? ""
-            cell.severityLabel.text = value?["severity"] as? String ?? ""
-            cell.pointsLabel.text = value?["points"] as? String ?? ""
-        };
         
         return cell;
     }
