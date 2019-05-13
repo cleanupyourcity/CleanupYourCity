@@ -18,6 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4dr-Wk-bQF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.44166588400000001" green="0.95448082619999997" blue="0.29120853870000002" alpha="0.74555864729999999" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MfN-0G-khb">
                                 <rect key="frame" x="16" y="348" width="343" height="299"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,7 +43,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biohazardIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uoT-rs-WIO">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7" translatesAutoresizingMaskIntoConstraints="NO" id="uoT-rs-WIO">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="64" id="5hI-k5-S66"/>
@@ -112,6 +117,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bkgrd" destination="4dr-Wk-bQF" id="Gmb-aM-13t"/>
                         <outlet property="gMapView" destination="ukj-MQ-7ft" id="P7S-ZP-PpA"/>
                         <outlet property="tableView" destination="MfN-0G-khb" id="gYI-Ri-vwx"/>
                     </connections>
@@ -156,6 +162,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="biohazardIcon" width="491.51998901367188" height="491.51998901367188"/>
+        <image name="7" width="491.51998901367188" height="491.51998901367188"/>
     </resources>
 </document>
