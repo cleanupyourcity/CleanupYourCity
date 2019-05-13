@@ -14,44 +14,48 @@ import FirebaseDatabase
 import FirebaseUI
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    // database and user id reference
     var ref: DatabaseReference!
-    
     let userID = Auth.auth().currentUser?.uid;
     
+    // list of event history we are going to use
     var eventList = [Event]()
-        
+    
+    // outlets from Profile storyboard
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
-    
     
     @IBOutlet weak var historyTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // getting the image reference and making a placeholder for the image
         let StorageRef = Storage.storage().reference()
-        
         let StorageRefChild = StorageRef.child("profileImages/\(String(describing: userID)).jpeg")
-        
         let imageView: UIImageView = self.profileImage
-        
         let placeholderImage = UIImage(named: "placeholder.jpg")
         
+        // setting the image to the imageview
         imageView.sd_setImage(with: StorageRefChild, placeholderImage: placeholderImage)
         
+        // initializing the database
         self.ref = Database.database().reference();
         
+        // getting the users name and bio from the database
         ref.child("profile").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
+            
+            // setting the labels on the storyboard
             self.userLabel.text = value?["username"] as? String ?? ""
             self.bioLabel.text = value?["bio"] as? String ?? ""
         };
         
+        // getting the event history of the user
         ref.child("profile").child(userID!).child("history").observe(DataEventType.value) { (snapshot) in
             if snapshot.childrenCount > 0 {
-                
+                // going through all the events in history for the current user
                 for events in snapshot.children.allObjects as! [DataSnapshot] {
                     
                     let eventObject = events.value as? [String: AnyObject]
@@ -90,12 +94,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = historyTableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! historyCell;
         let event: Event!
+        // getting the event per row
         event = eventList[indexPath.row]
         
+        // setting the cell labels
         cell.nameLabel.text = event.eventName
         cell.descriptionLabel.text = event.eventDescription
         cell.severityLabel.text = event.eventSeverity
         
+        // setting the cell color based off severity
         if(event.eventSeverity == "0"){
             cell.backgroundColor = UIColor.green
         }
