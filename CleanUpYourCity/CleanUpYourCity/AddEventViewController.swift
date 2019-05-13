@@ -182,14 +182,14 @@ class AddEventViewController: UIViewController {
         ref?.child("profile").child(userID!).child("history").child(key!).setValue(event)
         self.navigationController?.popViewController(animated: true)    }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+    //}
+    
 
 }

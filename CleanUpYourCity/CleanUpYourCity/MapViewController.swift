@@ -139,4 +139,22 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+     
+        if segue.identifier == "DetailID"
+        {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let event = eventList[indexPath.row]
+        
+        // Pass the selected object to the new view controller.
+        let detailViewController = segue.destination as! DetailViewController
+        
+        detailViewController.event = event
+        tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+    
 }

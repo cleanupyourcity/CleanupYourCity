@@ -73,6 +73,7 @@
                                             <outlet property="eventDescription" destination="0bg-2H-FOg" id="d6b-gU-tUm"/>
                                             <outlet property="eventName" destination="mpm-X8-Nw3" id="Lqa-Mc-dce"/>
                                             <outlet property="eventPic" destination="uoT-rs-WIO" id="JFh-Tb-7c2"/>
+                                            <segue destination="uxG-wT-bXD" kind="show" identifier="DetailID" id="Pgj-Cv-dW7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,12 +103,12 @@
                     <navigationItem key="navigationItem" id="4Rk-N0-7m4">
                         <barButtonItem key="leftBarButtonItem" title="Profile" id="Y9I-uH-jfk">
                             <connections>
-                                <segue destination="6pN-CU-JsM" kind="show" id="Vwb-ut-Mbw"/>
+                                <segue destination="6pN-CU-JsM" kind="show" identifier="ProfileID" id="Vwb-ut-Mbw"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="AddEvent" id="kwS-0E-dyQ">
                             <connections>
-                                <segue destination="hDx-DV-mvW" kind="show" id="yeo-6g-clf"/>
+                                <segue destination="hDx-DV-mvW" kind="show" identifier="AddID" id="yeo-6g-clf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -135,6 +136,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jn6-NN-kTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1918" y="164"/>
+        </scene>
+        <!--DetailID-->
+        <scene sceneID="cwk-hR-bok">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DetailID" storyboardName="Detail" referencedIdentifier="DetailID" id="uxG-wT-bXD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYY-xy-QiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="237"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gxa-FL-qdq">
