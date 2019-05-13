@@ -155,11 +155,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Profile" id="4Eu-w9-IZ4">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="ksZ-Cs-yqn">
-                            <connections>
-                                <segue destination="ZDP-UH-YNe" kind="show" id="RKj-rT-9kD"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Logout" id="sIA-hf-bgD">
+                                <connections>
+                                    <action selector="onLogoutButton:" destination="mIV-8b-zt9" id="mnE-k0-1Qp"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Edit" id="ksZ-Cs-yqn">
+                                <connections>
+                                    <segue destination="ZDP-UH-YNe" kind="show" id="RKj-rT-9kD"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
