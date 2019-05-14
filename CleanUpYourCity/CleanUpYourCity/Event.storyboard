@@ -78,6 +78,7 @@
                                             <outlet property="eventDescription" destination="0bg-2H-FOg" id="d6b-gU-tUm"/>
                                             <outlet property="eventName" destination="mpm-X8-Nw3" id="Lqa-Mc-dce"/>
                                             <outlet property="eventPic" destination="uoT-rs-WIO" id="JFh-Tb-7c2"/>
+                                            <segue destination="fi9-iT-W5e" kind="show" identifier="DetailID" id="8vp-la-Qdd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -142,6 +143,14 @@
             </objects>
             <point key="canvasLocation" x="1918" y="164"/>
         </scene>
+        <!--DetailID-->
+        <scene sceneID="Cuh-MA-QNk">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DetailID" storyboardName="Detail" referencedIdentifier="DetailID" id="fi9-iT-W5e" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ped-YI-JlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1819" y="248"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gxa-FL-qdq">
             <objects>
@@ -162,6 +171,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="7" width="491.51998901367188" height="491.51998901367188"/>
+        <image name="7" width="512" height="512"/>
     </resources>
 </document>
