@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		15E55A502B0C3129D294FF9B /* Pods_CleanUpYourCityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E98562B8DD00763E11AAF3 /* Pods_CleanUpYourCityUITests.framework */; };
 		7240FB6B22722B92006A10D1 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240FB6A22722B92006A10D1 /* CameraViewController.swift */; };
+		845AE974228A712A00DF7A2E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AE973228A712A00DF7A2E /* DetailViewController.swift */; };
+		845AE976228A717800DF7A2E /* OtherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AE975228A717800DF7A2E /* OtherProfileViewController.swift */; };
+		845AE978228A71FE00DF7A2E /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845AE977228A71FE00DF7A2E /* Detail.storyboard */; };
+		845AE97A228A724200DF7A2E /* OtherProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845AE979228A724200DF7A2E /* OtherProfile.storyboard */; };
 		8531AD9A2280E2D000EAB600 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531AD992280E2D000EAB600 /* AddEventViewController.swift */; };
 		85CEEB41224C2A0000CAC35B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEEB40224C2A0000CAC35B /* AppDelegate.swift */; };
 		85CEEB43224C2A0000CAC35B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEEB42224C2A0000CAC35B /* ViewController.swift */; };
@@ -56,6 +60,10 @@
 		7240FB6A22722B92006A10D1 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		7B311A28ED61F11C2ACBC347 /* Pods-CleanUpYourCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCityTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCityTests/Pods-CleanUpYourCityTests.release.xcconfig"; sourceTree = "<group>"; };
 		8209B6C432009AA9C672BA06 /* Pods-CleanUpYourCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUpYourCityTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUpYourCityTests/Pods-CleanUpYourCityTests.debug.xcconfig"; sourceTree = "<group>"; };
+		845AE973228A712A00DF7A2E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		845AE975228A717800DF7A2E /* OtherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileViewController.swift; sourceTree = "<group>"; };
+		845AE977228A71FE00DF7A2E /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		845AE979228A724200DF7A2E /* OtherProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtherProfile.storyboard; sourceTree = "<group>"; };
 		8531AD992280E2D000EAB600 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		85CEEB3D224C2A0000CAC35B /* CleanUpYourCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanUpYourCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CEEB40224C2A0000CAC35B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +195,10 @@
 				A3FA27CF2277AE69006B82F1 /* historyCell.swift */,
 				BCF912B2226529F400D2B83C /* GoogleService-Info.plist */,
 				8531AD992280E2D000EAB600 /* AddEventViewController.swift */,
+				845AE973228A712A00DF7A2E /* DetailViewController.swift */,
+				845AE975228A717800DF7A2E /* OtherProfileViewController.swift */,
+				845AE977228A71FE00DF7A2E /* Detail.storyboard */,
+				845AE979228A724200DF7A2E /* OtherProfile.storyboard */,
 			);
 			path = CleanUpYourCity;
 			sourceTree = "<group>";
@@ -332,6 +344,8 @@
 			files = (
 				85CEEB4B224C2A0000CAC35B /* LaunchScreen.storyboard in Resources */,
 				A301BD7C228A10040094E15A /* Profile.storyboard in Resources */,
+				845AE978228A71FE00DF7A2E /* Detail.storyboard in Resources */,
+				845AE97A228A724200DF7A2E /* OtherProfile.storyboard in Resources */,
 				BCF912B3226529F400D2B83C /* GoogleService-Info.plist in Resources */,
 				A33EECED225E91B4009E810C /* EditProfile.storyboard in Resources */,
 				A33EECE7225E9154009E810C /* Event.storyboard in Resources */,
@@ -467,9 +481,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845AE974228A712A00DF7A2E /* DetailViewController.swift in Sources */,
 				BCE1FF01227797CD0001078F /* RegisterViewController.swift in Sources */,
 				8531AD9A2280E2D000EAB600 /* AddEventViewController.swift in Sources */,
 				A96BFD59227A451C0054C413 /* Event.swift in Sources */,
+				845AE976228A717800DF7A2E /* OtherProfileViewController.swift in Sources */,
 				BCF912B12264090000D2B83C /* CustomTextfield.swift in Sources */,
 				A3FA27CE2277AB58006B82F1 /* ProfileViewController.swift in Sources */,
 				BCF912AF226408D200D2B83C /* CustomButton.swift in Sources */,
