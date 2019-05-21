@@ -42,7 +42,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         
         let imageView: UIImageView = self.imageView
-        let placeholderImage = UIImage(named: "placeholder.jpg")
+        let placeholderImage = UIImage(named: "image_placeholder.jpg")
         imageView.sd_setImage(with: StorageRefChild, placeholderImage: placeholderImage)
         
         // Loading the events from the database
@@ -70,11 +70,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                     self.eventList.append(event)
                 }
                 //reloading the tableview
-                self.historyTableView.reloadData()
+                //self.historyTableView.reloadData()
             }
         };
-        self.historyTableView.delegate = self;
-        self.historyTableView.dataSource = self;
+        
+        // self.historyTableView.delegate = self;
+        // self.historyTableView.dataSource = self;
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
